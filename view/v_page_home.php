@@ -325,25 +325,25 @@
 						"selectedAttraction": 0.1,
 						"parallax" : 0,
 						"friction": 0.6        }'>
+										<?php  foreach($flowerKM as $KM):?>
 											<div class="carousel-cell col">
 												<div class="devvn_item">
 													<div class="row">
-														<div
-															class="product-small col has-hover product type-product post-483 status-publish instock product_cat-hoa-hong has-post-thumbnail shipping-taxable purchasable product-type-simple">
+														<div class="product-small col has-hover product type-product post-483 status-publish instock product_cat-hoa-hong has-post-thumbnail shipping-taxable purchasable product-type-simple">
 															<div class="col-inner">
 																<div class="badge-container absolute left top z-1">
 																</div>
 																<div class="product-small box ">
 																	<div class="box-image">
 																		<div class="image-none">
-																			<a href="#"
+																			<a href="?mod=product&act=details&id=<?php echo$KM['id']?>&id_danhmuc=<?php echo $KM['id_danhmuc']?>"
 																				aria-label="Love Comes Softly">
 																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-comes-softly-300x300.jpeg"
+																					src="wp-content/uploads/2021/05/<?php echo $KM['anhhoa']?>"
+																					data-src="wp-content/uploads/2021/05/<?php echo $KM['anhhoa']?>"
 																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
 																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-comes-softly-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-comes-softly-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-comes-softly-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-comes-softly-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-comes-softly-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-comes-softly.jpeg 650w"
+																					data-srcset="wp-content/uploads/2021/05/<?php echo $KM['anhhoa']?>"
 																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
 																		</div>
 																		<div class="image-tools is-small top right show-on-hover">
@@ -360,816 +360,36 @@
 																		<div class="title-wrapper">
 																			<p class="name product-title woocommerce-loop-product__title">
 																				<a href=""
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Love
-																					Comes Softly</a>
+																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><?php echo$KM['tenhoa']?></a>
 																			</p>
 																		</div>
 																		<div class="price-wrapper">
 																			<span class="price"><span
-																					class="woocommerce-Price-amount amount"><bdi>649.000&nbsp;<span
-																							class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
+																					class="woocommerce-Price-amount amount"><bdi><?php echo $KM['giaban']?>&nbsp;<span
+																							class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span></span>
 																		</div>
 																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
+																				href="?mod=cart&act=cart&id_hoa=<?php echo $KM['id']?>&giaban=<?php echo$KM['giaban']?>" data-quantity="1"
 																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
 																				data-product_id="483" data-product_sku=""
 																				aria-label="Thêm &ldquo;Love Comes Softly&rdquo; vào giỏ hàng"
 																				rel="nofollow">Thêm vào giỏ hàng</a></div>
 																	</div>
 																</div>
-															</div>
-														</div>
-														<div
-															class="product-small col has-hover product type-product post-479 status-publish instock product_cat-hoa-hong has-post-thumbnail shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#" aria-label="Mystical">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mystical-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mystical-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mystical-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mystical-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mystical-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mystical-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mystical.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Mystical</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><span
-																					class="woocommerce-Price-amount amount"><bdi>649.000&nbsp;<span
-																							class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="479" data-product_sku=""
-																				aria-label="Thêm &ldquo;Mystical&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
+																
 															</div>
 														</div>
 													</div>
-												</div>
+													
 											</div>
-
-
-											<div class="carousel-cell col">
-												<div class="devvn_item">
-													<div class="row">
-														<div
-															class="product-small col has-hover product type-product post-396 status-publish last instock product_cat-hoa-hong has-post-thumbnail shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#"
-																				aria-label="Enchanting Romance">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/enchanting-romance-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/enchanting-romance-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/enchanting-romance-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/enchanting-romance-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/enchanting-romance-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/enchanting-romance-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/enchanting-romance.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Enchanting
-																					Romance</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><span
-																					class="woocommerce-Price-amount amount"><bdi>649.000&nbsp;<span
-																							class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="396" data-product_sku=""
-																				aria-label="Thêm &ldquo;Enchanting Romance&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="product-small col has-hover product type-product post-392 status-publish first instock product_cat-hoa-hong has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-																	<div class="callout badge badge-circle">
-																		<div class="badge-inner secondary on-sale"><span
-																				class="onsale">-40%</span></div>
-																	</div>
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#"
-																				aria-label="Love Paradise">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-paradise-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-paradise-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-paradise-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-paradise-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-paradise-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-paradise-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/love-paradise.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Love
-																					Paradise</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><del aria-hidden="true"><span
-																						class="woocommerce-Price-amount amount"><bdi>499.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del>
-																				<ins><span
-																						class="woocommerce-Price-amount amount"><bdi>299.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="392" data-product_sku=""
-																				aria-label="Thêm &ldquo;Love Paradise&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
 											</div>
-
-
-											<div class="carousel-cell col">
-												<div class="devvn_item">
-													<div class="row">
-														<div
-															class="product-small col has-hover product type-product post-388 status-publish instock product_cat-hoa-hong has-post-thumbnail shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#"
-																				aria-label="Je T&#039;aime Beaucoup">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-beaucoup-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-beaucoup-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-beaucoup-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-beaucoup-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-beaucoup-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-beaucoup-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-beaucoup.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Je
-																					T&#8217;aime Beaucoup</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><span
-																					class="woocommerce-Price-amount amount"><bdi>639.000&nbsp;<span
-																							class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="388" data-product_sku=""
-																				aria-label="Thêm &ldquo;Je T&#039;aime Beaucoup&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="product-small col has-hover product type-product post-385 status-publish instock product_cat-hoa-hong has-post-thumbnail shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#"
-																				aria-label="Cupid&#039;s Kisses">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/cupids-kisses-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/cupids-kisses-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/cupids-kisses-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/cupids-kisses-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/cupids-kisses-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/cupids-kisses-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/cupids-kisses.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Cupid&#8217;s
-																					Kisses</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><span
-																					class="woocommerce-Price-amount amount"><bdi>599.000&nbsp;<span
-																							class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="385" data-product_sku=""
-																				aria-label="Thêm &ldquo;Cupid&#039;s Kisses&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-
-											<div class="carousel-cell col">
-												<div class="devvn_item">
-													<div class="row">
-														<div
-															class="product-small col has-hover product type-product post-381 status-publish last instock product_cat-hoa-hong has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-																	<div class="callout badge badge-circle">
-																		<div class="badge-inner secondary on-sale"><span
-																				class="onsale">-29%</span></div>
-																	</div>
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#"
-																				aria-label="Je T&#039;aime">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/je-taime.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Je
-																					T&#8217;aime</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><del aria-hidden="true"><span
-																						class="woocommerce-Price-amount amount"><bdi>479.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del>
-																				<ins><span
-																						class="woocommerce-Price-amount amount"><bdi>339.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="381" data-product_sku=""
-																				aria-label="Thêm &ldquo;Je T&#039;aime&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="product-small col has-hover product type-product post-378 status-publish first instock product_cat-hoa-hong has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-																	<div class="callout badge badge-circle">
-																		<div class="badge-inner secondary on-sale"><span
-																				class="onsale">-36%</span></div>
-																	</div>
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#"
-																				aria-label="Mon Bel Amour">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mon-bel-amour-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mon-bel-amour-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mon-bel-amour-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mon-bel-amour-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mon-bel-amour-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mon-bel-amour-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/mon-bel-amour.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Mon
-																					Bel Amour</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><del aria-hidden="true"><span
-																						class="woocommerce-Price-amount amount"><bdi>439.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del>
-																				<ins><span
-																						class="woocommerce-Price-amount amount"><bdi>279.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="378" data-product_sku=""
-																				aria-label="Thêm &ldquo;Mon Bel Amour&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-
-											<div class="carousel-cell col">
-												<div class="devvn_item">
-													<div class="row">
-														<div
-															class="product-small col has-hover product type-product post-374 status-publish instock product_cat-hoa-hong has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-																	<div class="callout badge badge-circle">
-																		<div class="badge-inner secondary on-sale"><span
-																				class="onsale">-23%</span></div>
-																	</div>
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#"
-																				aria-label="Under The Blue Sky">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/under-the-blue-sky-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/under-the-blue-sky-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/under-the-blue-sky-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/under-the-blue-sky-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/under-the-blue-sky-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/under-the-blue-sky-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/under-the-blue-sky.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Under
-																					The Blue Sky</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><del aria-hidden="true"><span
-																						class="woocommerce-Price-amount amount"><bdi>299.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del>
-																				<ins><span
-																						class="woocommerce-Price-amount amount"><bdi>229.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="374" data-product_sku=""
-																				aria-label="Thêm &ldquo;Under The Blue Sky&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="product-small col has-hover product type-product post-368 status-publish instock product_cat-hoa-hong has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-																	<div class="callout badge badge-circle">
-																		<div class="badge-inner secondary on-sale"><span
-																				class="onsale">-18%</span></div>
-																	</div>
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#" aria-label="Pink Moon">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/pink-moon-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/pink-moon-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/pink-moon-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/pink-moon-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/pink-moon-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/pink-moon-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/pink-moon.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="#"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Pink
-																					Moon</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><del aria-hidden="true"><span
-																						class="woocommerce-Price-amount amount"><bdi>569.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del>
-																				<ins><span
-																						class="woocommerce-Price-amount amount"><bdi>469.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="368" data-product_sku=""
-																				aria-label="Thêm &ldquo;Pink Moon&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-
-											<div class="carousel-cell col">
-												<div class="devvn_item">
-													<div class="row">
-														<div
-															class="product-small col has-hover product type-product post-367 status-publish last instock product_cat-hoa-hong has-post-thumbnail shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="#"
-																				aria-label="Fabulously Red">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/fabulously-red-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/fabulously-red-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/fabulously-red-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/fabulously-red-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/fabulously-red-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/fabulously-red-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/fabulously-red.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="san-pham/fabulously-red/index.html"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Fabulously
-																					Red</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><span
-																					class="woocommerce-Price-amount amount"><bdi>569.000&nbsp;<span
-																							class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="367" data-product_sku=""
-																				aria-label="Thêm &ldquo;Fabulously Red&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="product-small col has-hover product type-product post-363 status-publish first instock product_cat-hoa-violet has-post-thumbnail shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="san-pham/violet-lover/index.html"
-																				aria-label="Violet Lover">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/violet-lover-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/violet-lover-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/violet-lover-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/violet-lover-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/violet-lover-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/violet-lover-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/violet-lover.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="san-pham/violet-lover/index.html"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Violet
-																					Lover</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><span
-																					class="woocommerce-Price-amount amount"><bdi>659.000&nbsp;<span
-																							class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="363" data-product_sku=""
-																				aria-label="Thêm &ldquo;Violet Lover&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-
-											<div class="carousel-cell col">
-												<div class="devvn_item">
-													<div class="row">
-														<div
-															class="product-small col has-hover product type-product post-304 status-publish instock product_cat-hoa-hong has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-																	<div class="callout badge badge-circle">
-																		<div class="badge-inner secondary on-sale"><span
-																				class="onsale">-39%</span></div>
-																	</div>
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="san-pham/rose-land/index.html" aria-label="Rose Land">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/rose-land-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/rose-land-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/rose-land-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/rose-land-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/rose-land-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/rose-land-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/rose-land.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="san-pham/rose-land/index.html"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Rose
-																					Land</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><del aria-hidden="true"><span
-																						class="woocommerce-Price-amount amount"><bdi>489.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del>
-																				<ins><span
-																						class="woocommerce-Price-amount amount"><bdi>299.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="304" data-product_sku=""
-																				aria-label="Thêm &ldquo;Rose Land&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="product-small col has-hover product type-product post-300 status-publish instock product_cat-hoa-hong has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-															<div class="col-inner">
-
-																<div class="badge-container absolute left top z-1">
-																	<div class="callout badge badge-circle">
-																		<div class="badge-inner secondary on-sale"><span
-																				class="onsale">-35%</span></div>
-																	</div>
-																</div>
-																<div class="product-small box ">
-																	<div class="box-image">
-																		<div class="image-none">
-																			<a href="san-pham/naomi-red-romance/index.html"
-																				aria-label="Naomi Red Romance">
-																				<img width="300" height="300"
-																					src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-																					data-src="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/naomi-red-romance-1-300x300.jpeg"
-																					class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																					alt="" decoding="async" srcset=""
-																					data-srcset="https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/naomi-red-romance-1-300x300.jpeg 300w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/naomi-red-romance-1-400x400.jpeg 400w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/naomi-red-romance-1-150x150.jpeg 150w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/naomi-red-romance-1-600x600.jpeg 600w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/naomi-red-romance-1-100x100.jpeg 100w, https://shophoa5.muathemewp.com/wp-content/uploads/2021/05/naomi-red-romance-1.jpeg 650w"
-																					sizes="(max-width: 300px) 100vw, 300px" /> </a>
-																		</div>
-																		<div class="image-tools is-small top right show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools is-small hide-for-small bottom left show-on-hover">
-																		</div>
-																		<div
-																			class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																		</div>
-																	</div>
-
-																	<div class="box-text box-text-products">
-																		<div class="title-wrapper">
-																			<p class="name product-title woocommerce-loop-product__title">
-																				<a href="san-pham/naomi-red-romance/index.html"
-																					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Naomi
-																					Red Romance</a>
-																			</p>
-																		</div>
-																		<div class="price-wrapper">
-																			<span class="price"><del aria-hidden="true"><span
-																						class="woocommerce-Price-amount amount"><bdi>569.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del>
-																				<ins><span
-																						class="woocommerce-Price-amount amount"><bdi>369.000&nbsp;<span
-																								class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></span>
-																		</div>
-																		<div class="add-to-cart-button"><a
-																				href="#" data-quantity="1"
-																				class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-																				data-product_id="300" data-product_sku=""
-																				aria-label="Thêm &ldquo;Naomi Red Romance&rdquo; vào giỏ hàng"
-																				rel="nofollow">Thêm vào giỏ hàng</a></div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-
+										<?php endforeach;?>
 										</div>
 									</div>
-
 								</div>
 							</div>
-
-
 						</div>
 					</div>
-
-
 					<style>
 						#section_722115935 {
 							padding-top: 20px;
@@ -1206,7 +426,7 @@
 												<div class="product-small box ">
 													<div class="box-image">
 														<div class="image-none">
-															<a href="san-pham/love-comes-softly/index.html"
+															<a href="?mod=product&act=details&id=<?php echo$sanpham['id']?>&id_danhmuc=<?php echo $sanpham['id_danhmuc']?>"
 																aria-label="Love Comes Softly">
 																<img width="300" height="300"
 																	src="wp-content/uploads/2021/05/<?php echo $sanpham['anhhoa']?>"
@@ -1234,9 +454,9 @@
 														<div class="price-wrapper">
 															<span class="price"><span
 																	class="woocommerce-Price-amount amount"><bdi><?php echo $sanpham['giaban']?>&nbsp;<span
-																			class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
+																			class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span></span>
 														</div>
-														<div class="add-to-cart-button"><a href="#"
+														<div class="add-to-cart-button"><a href="?mod=cart&act=cart&id_hoa=<?php echo $sanpham['id']?>&giaban=<?php echo$sanpham['giaban']?>"
 																data-quantity="1"
 																class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
 																data-product_id="483" data-product_sku=""
@@ -1248,14 +468,9 @@
 										</div>
 										<?php endif;?>
 										<?php endforeach;?>
-
-
 										<!-- end items -->
 									</div>
-									
-
 								</div>
-								
 								<style>
 									#col-1427436984>.col-inner {
 										padding: 15px 10px 0px 10px;
