@@ -426,7 +426,7 @@
 												<div class="product-small box ">
 													<div class="box-image">
 														<div class="image-none">
-															<a href="?mod=product&act=details&id=<?php echo$sanpham['id']?>&id_danhmuc=<?php echo $sanpham['id_danhmuc']?>"
+															<a href="?mod=product&act=details&id=<?php echo$sanpham['id']?>&id_danhmuc=<?php echo $sanpham['id_danhmuc']?>&page"
 																aria-label="Love Comes Softly">
 																<img width="300" height="300"
 																	src="wp-content/uploads/2021/05/<?php echo $sanpham['anhhoa']?>"

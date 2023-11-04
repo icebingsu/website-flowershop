@@ -12,41 +12,18 @@
 
 	            <section class="section" id="section_55860087">
 	               <div class="bg section-bg fill bg-fill  bg-loaded">
-
-
-
-
-
 	               </div>
-
-
-
 	               <div class="section-content relative">
-
-
 	                  <div class="row row-small" id="row-1083235498">
-
-
 	                     <div id="col-1386900165" class="col mh-col-summary-product small-12 large-12">
 	                        <div class="col-inner" style="background-color:rgb(255, 255, 255);">
-
-
-
 	                           <div class="row row-collapse" id="row-578614568">
-
-
 	                              <div id="col-1631835052" class="col is-sticky-column medium-12 small-12 large-6">
 	                                 <div class="col-inner">
-
-
-
 	                                    <div class="row row-small">
 	                                       <div class="col large-10">
-
 	                                          <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images relative mb-half has-hover" data-columns="4">
-
 	                                             <div class="badge-container is-larger absolute left top z-1">
-
 	                                             </div>
 
 	                                             <div class="image-tools absolute top show-on-hover right z-3">

@@ -50,37 +50,7 @@ if(isset($_GET['act'])){
             header("location:?mod=cart&act=cart-details");
             break;
          case 'updatecartdetails':
-            include_once "model/m_cart.php";
-            if($_SESSION['dangnhap'] == true){      
-               $checkcart = checkcartkhachhang($_SESSION['id_khachhang']);
-               $checkcarthoa = checkcarthoa($_GET['id_hoa'],$_SESSION['id_khachhang']);
-               $themsoluong = intval($_POST['quantity']);
-               $tongtien = $checkcart['tongtien'] * $soluong;
-               $soluong = $themsoluong + $checkcart['soluong'];
-               if($checkcart){
-               if($checkcart['id_hoa'] == $_GET['id_hoa']){
-                  updateslttdetails($soluong, $tongtien,$_GET['id_hoa']);
-                  $tongtien = 0;
-                  // header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc']."&addtocart=true"); 
-               }     
-               else{
-                  addtocart($_SESSION['id_khachhang'] , $_GET['id_hoa'],$_GET['giaban'],$themsoluong);        
-                  // header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc']."&addtocart=true"); 
-               }
-              }
-               else{
-                  echo $_GET['giaban']+$tongtien;
-                 addtocart($_SESSION['id_khachhang'] , $_GET['id_hoa'], $_GET['giaban']+$tongtien, $themsoluong);
-                 header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc'].""); 
-               // header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc']."&addtocart=true"); 
-
-              }
-            }
-            else{
-               header("location:?mod=page&act=home&addtocart=false"); 
-            }
-            
-            // updatesl($_POST['quantity']+$soluong, $_GET['id_hoa'] , $_SESSION['id_khachhang']);
+       
             // header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc'].""); 
             break;
       default:
