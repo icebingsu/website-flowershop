@@ -7,8 +7,11 @@ if(isset($_GET['act'])){
          $listsanphamindanhmuc = listsanphamindanhmuc();
          $flowerKM = flowerKM();
          $view_name = "page_home";
+         $danhmuc = danhmuc();
          break;
-      
+      case 'layout_search':
+        var_dump($_POST);
+         break;
       default:
          $_GET['act'] = "home";
          break;

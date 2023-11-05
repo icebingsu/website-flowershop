@@ -48,5 +48,9 @@
    function sanphamlienquan($id_danhmuc){
       return pdo_query("SELECT * FROM hoa WHERE id_danhmuc = ?",$id_danhmuc);
    }
+   // show danhmuc 
+   function danhmuc(){
+      return pdo_query("SELECT * FROM danhmuc");
+   }
   
 ?>

@@ -27,7 +27,6 @@ if(isset($_GET['act'])){
          else{
             header("location:?mod=page&act=home&addtocart=false"); 
          }
-       
          // làm thêm css hiện toast
          break;
       case 'removecart': 

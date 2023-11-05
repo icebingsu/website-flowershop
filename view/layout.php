@@ -1348,23 +1348,23 @@
 								<li class="header-search-form search-form html relative has-icon">
 									<div class="header-search-form-wrapper">
 										<div class="searchform-wrapper ux-search-box relative is-normal">
-											<form role="search" method="get" class="searchform" action="https://shophoa5.muathemewp.com/">
+											<form role="search" method="post" class="searchform" action="?mod=page&act=layout_search">
 												<div class="flex-row relative">
 													<div class="flex-col search-form-categories">
 														<select class="search_categories resize-select mb-0" name="product_cat">
-															<option value="" selected='selected'>Danh mục</option>
-															<option value="hoa-hong">Hoa hồng</option>
-															<option value="hoa-violet">Hoa Violet</option>
+															<option value="0">Danh mục	</option>
+															<?php foreach($danhmuc as $danhmuc):?>
+															<option value="<?php echo$danhmuc['id']?>"><?php echo$danhmuc['tendanhmuc']?></option>
+															<?php endforeach;?>
 														</select>
 													</div>
 													<div class="flex-col flex-grow">
 														<label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm
 															kiếm:</label>
-														<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tôi muốn tìm ..." value="" name="s" />
-														<input type="hidden" name="post_type" value="product" />
+														<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tôi muốn tìm ..." value="" name="search" />
 													</div>
 													<div class="flex-col">
-														<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button wp-element-button icon mb-0" aria-label="Submit">
+														<button type="submit"  class="ux-search-submit secondary button wp-element-button icon mb-0" aria-label="Submit">
 															<i class="icon-search"></i> </button>
 													</div>
 												</div>
@@ -1514,9 +1514,6 @@
 
 						<div id="col-1190627604" class="col mh-col-footer medium-6 small-12 large-4 medium-col-first">
 							<div class="col-inner">
-
-
-
 								<div class="img has-hover logo x md-x lg-x y md-y lg-y" id="image_924473354">
 									<div class="img-inner image-cover dark" style="padding-top:50px;">
 										<img width="269" height="58" src="wp-content/uploads/2021/06/logo-shophoa-black.png" class="attachment-original size-original" alt="" decoding="async" loading="lazy" />
