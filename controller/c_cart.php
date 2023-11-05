@@ -7,11 +7,11 @@ if(isset($_GET['act'])){
              $checkcart = checkcartkhachhang($_SESSION['id_khachhang']);
              $checkcarthoa = checkcarthoa($_GET['id_hoa'],$_SESSION['id_khachhang']);
              if($checkcart){
-               $tongtien = $_GET['giaban'];
-               $soluong = $checkcarthoa['soluong'];
-               if($checkcarthoa['id_hoa'] == $_GET['id_hoa']){
+                if($checkcarthoa['id_hoa'] == $_GET['id_hoa']){
+                   $soluong = $checkcarthoa['soluong']+1;
+                   $tongtien = $_GET['giaban'] *$soluong;
                   // tiến hành update soluong của gio hàng có id_hoa 
-                  updatesltt($soluong, $tongtien ,$_GET['id_hoa']); 
+                  update($soluong, $tongtien ,$_GET['id_hoa']); 
                   header("location:?mod=page&act=home&addtocart=true");    
                }
                else{
@@ -45,13 +45,37 @@ if(isset($_GET['act'])){
             break;
          case 'updatecart':
             include_once "model/m_cart.php";
-            var_dump($_POST['id_hoa']);
-            updatesl($_POST['sl'], $_POST['id_hoa'] , $_SESSION['id_khachhang']);
-            header("location:?mod=cart&act=cart-details");
+            $soluong = (int)$_POST['sl'];
+            if($soluong <= 0){
+               $soluong = 1;
+               
+            }else{
+               
+            }
+            // header("location:?mod=cart&act=cart-details");
             break;
          case 'updatecartdetails':
-       
-            // header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc'].""); 
+            include_once "model/m_cart.php";
+            if($_SESSION['dangnhap'] == true){
+               $checkcart = checkcartkhachhang($_SESSION['id_khachhang']);
+               $checkcarthoa = checkcarthoa($_GET['id_hoa'],$_SESSION['id_khachhang']);
+               $soluong = (int)$_POST['quantity']+$checkcarthoa['soluong'];
+               $tongtien = $soluong * $_GET['giaban'];
+               if($checkcarthoa){
+                  echo "cart này đã có tiến hành update";
+                  update($soluong,$tongtien,$_GET['id_hoa']);
+                  header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc']."&addtocart=true"); 
+               }
+               else{
+                  echo "cart này chưa có tiến hành tạo cart";
+                  addtocart($_SESSION['id_khachhang'] , $_GET['id_hoa'], $tongtien, $soluong);
+                  header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc']."&addtocart=true"); 
+               }
+              }
+           else{
+              header("location:?mod=page&act=home&addtocart=false"); 
+           }
+            header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc'].""); 
             break;
       default:
          $_GET['act'] = "home";

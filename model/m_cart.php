@@ -13,10 +13,10 @@ function addtocart($id_khachhang , $id_hoa, $tongtien, $soluong){
    pdo_execute("INSERT INTO giohang(id_khachhang, id_hoa, tongtien, soluong) value(?,?,?,?)",$id_khachhang,$id_hoa,$tongtien,$soluong);
 }
 // update
-function updatesltt($soluong, $tongtien ,$id_hoa){
+function update($soluong, $tongtien ,$id_hoa){
    pdo_execute(
       "UPDATE giohang
-      SET soluong = ?+1, tongtien = ? * soluong 
+      SET soluong = ?, tongtien = ? 
       WHERE id_hoa = ?", $soluong, $tongtien ,$id_hoa
    );
 }
@@ -39,10 +39,10 @@ function removecart($id_hoa,$id_khachhang){
   pdo_execute("DELETE FROM giohang WHERE id_hoa = ? and id_khachhang = ?",$id_hoa ,$id_khachhang);
 }
 // update so luong
-function updatesl($sl , $id_hoa,$id_khachhang){
+function updatesl($sl,$tongtien , $id_hoa,$id_khachhang){
   pdo_execute("UPDATE giohang
-  SET soluong = ?
-  WHERE id_hoa = ? AND id_khachhang = ?", $sl , $id_hoa , $id_khachhang);
+  SET soluong = ?, tongtien = ?
+  WHERE id_hoa = ? AND id_khachhang = ?", $sl,$tongtien , $id_hoa , $id_khachhang);
 }
 function updateslttdetails($soluong, $tongtien ,$id_hoa){
   pdo_execute('UPDATE giohang SET soluong = ?, tongtien =? WHERE id_hoa= ?',$soluong,$tongtien,$id_hoa);
