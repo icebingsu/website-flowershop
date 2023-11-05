@@ -48,7 +48,7 @@
                   
               
                   <?php foreach($showgiohang as $showgiohang):?>
-                     <?php $tongtiengiohang =$tongtiengiohang + ($showgiohang['tongtien']*$showgiohang['soluong']) ?>
+                     <?php $tongtiengiohang +=$showgiohang['tongtien']?>
                   <tr class="woocommerce-cart-form__cart-item cart_item">
                     <td class="product-remove">
                       <a
@@ -61,6 +61,7 @@
                       >
                     </td>
                     <input type="hidden" name="id_hoa" value="<?php echo$showgiohang['id_hoa']?>">
+                    <input type="hidden" name="giaban" value="<?php echo$showgiohang['giaban']?>">
                     <td class="product-thumbnail">
                       <a href="../san-pham/pink-moon/index.html"
                         ><img
@@ -142,7 +143,7 @@
                     <td class="product-subtotal" data-title="Tạm tính">
                       <span class="woocommerce-Price-amount amount"
                         ><bdi
-                          ><?php echo$showgiohang['tongtien']*$showgiohang['soluong']?><span
+                          ><?php echo$showgiohang['tongtien']?><span
                             class="woocommerce-Price-currencySymbol"
                             >.000 VND</span
                           ></bdi
@@ -208,16 +209,12 @@
                   <th>Tạm tính</th>
                   <td data-title="Tạm tính">
                     <span class="woocommerce-Price-amount amount"
-                      ><bdi
-                        ><?php echo$tongtiengiohang?><span
+                      ><bdi><?php echo$tongtiengiohang?><span
                           class="woocommerce-Price-currencySymbol"
-                          >.000 VND</span
-                        ></bdi
-                      ></span
-                    >
+                          >.000 VND</span></bdi
+                      ></span>
                   </td>
                 </tr>
-
                 <tr class="order-total">
                   <th>Tổng</th>
                   <td data-title="Tổng">

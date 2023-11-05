@@ -46,13 +46,18 @@ if(isset($_GET['act'])){
          case 'updatecart':
             include_once "model/m_cart.php";
             $soluong = (int)$_POST['sl'];
+            $giaban = (int)$_POST['giaban'];
+            echo $soluong;
+            echo $giaban;
+            echo "tổng tiền = ".$soluong*$giaban;
             if($soluong <= 0){
                $soluong = 1;
-               
+               update($soluong,$giaban*$soluong,$_POST['id_hoa']);
+               header("location:?mod=cart&act=cart-details");
             }else{
-               
+               update($soluong,$giaban*$soluong,$_POST['id_hoa']);
+               header("location:?mod=cart&act=cart-details");
             }
-            // header("location:?mod=cart&act=cart-details");
             break;
          case 'updatecartdetails':
             include_once "model/m_cart.php";
@@ -75,7 +80,7 @@ if(isset($_GET['act'])){
            else{
               header("location:?mod=page&act=home&addtocart=false"); 
            }
-            header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc'].""); 
+            // header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc'].""); 
             break;
       default:
          $_GET['act'] = "home";
