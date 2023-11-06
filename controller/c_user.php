@@ -29,12 +29,13 @@ if (isset($_GET['act'])) {
             if($checkMail){
                 $_SESSION['dangki'] = false;
                $register = 'false';
+               header('location:?mod=page&act=home&login='.$register.'');
                }
             else{
                register($_POST['hoten'], $_POST['email'], $_POST['pass']);
                $_SESSION['dangki'] = true;
                $register= 'true';
-               
+               header('location:?mod=page&act=home&login='.$register.'');
             }
          }
          header('location:?mod=page&act=home&register='.$register.'');

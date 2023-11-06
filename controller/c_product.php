@@ -7,6 +7,11 @@ if(isset($_GET['act'])){
          $sanphamlienquan = sanphamlienquan($_GET['id_danhmuc']);
          $view_name = "product_details";
          break;
+         case 'productAll':
+         include_once "model/m_product.php";
+         $nhomsanpham_product = danhmuc();
+         $view_name ="product_productAll";
+         break;
       default:
          $_GET['act'] = "home";
          break;

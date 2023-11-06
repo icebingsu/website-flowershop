@@ -6,8 +6,9 @@ if(isset($_GET['act'])){
          $listdanhmuc = listdanhmuc();
          $listsanphamindanhmuc = listsanphamindanhmuc();
          $flowerKM = flowerKM();
-         $view_name = "page_home";
          $danhmuc = danhmuc();
+         $nhomsanpham = $danhmuc;
+         $view_name = "page_home";
          break;
       case 'layout_search':
         var_dump($_POST);

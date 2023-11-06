@@ -150,6 +150,34 @@
            showToast(); 
          });
        </script>";
+      }else{
+        echo "
+        <script>
+        function showToast() {
+          var toast = document.createElement('div');
+          toast.classList.add('warning');
+          var icon = document.createElement('span');
+          icon.classList.add('icon');
+          icon.innerHTML = '&#10003;';
+          var message = document.createElement('span');
+          message.innerHTML = 'Tài khoản đã tồn tại';
+          var closeBtn = document.createElement('span');
+          closeBtn.classList.add('close-btn');
+          toast.appendChild(message);
+          toast.appendChild(closeBtn);
+          document.body.appendChild(toast);
+          closeBtn.addEventListener('click', function() {
+            toast.remove();
+          });
+          setTimeout(function() {
+            toast.remove();
+          }, 3000);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          showToast();
+          showToast(); 
+        });
+      </script>";
       }
    }
 ?>

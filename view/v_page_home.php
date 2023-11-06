@@ -16,51 +16,19 @@
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-407"><a
 														href="#"><img class="lazy-load"
 															src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
-															data-src="wp-content/uploads/2021/05/birthday-cake.svg" />Ngày sinh
-														nhật</a></li>
+															data-src="wp-content/uploads/2021/05/birthday-cake.svg" />Tất cả sản phẩm</a></li>
 												<li id="menu-item-408"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-408">
 													<a href="#"><img class="lazy-load"
 															src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
 															data-src="wp-content/uploads/2021/05/wine-glass.svg" />Chủ đề</a>
 													<ul class="sub-menu">
+														<?php foreach($nhomsanpham as $listsanpham):?>
 														<li id="menu-item-627"
 															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-627">
-															<a href="#">Hoa sinh nhật</a>
+															<a href="#"><?php echo$listsanpham['tendanhmuc']?></a>
 														</li>
-														<li id="menu-item-619"
-															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-619">
-															<a href="#">Hoa đám cưới</a>
-														</li>
-														<li id="menu-item-620"
-															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-620">
-															<a href="#">Hoa đám tang</a>
-														</li>
-														<li id="menu-item-621"
-															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-621">
-															<a href="#">Hoa giáng sinh</a>
-														</li>
-														<li id="menu-item-622"
-															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-622">
-															<a href="#">Hoa khai trương</a>
-														</li>
-														<li id="menu-item-623"
-															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-623">
-															<a href="#">Hoa lễ 20/10</a>
-														</li>
-														<li id="menu-item-624"
-															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-624">
-															<a href="#">Hoa lễ 8/3</a>
-														</li>
-														<li id="menu-item-625"
-															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-625">
-															<a href="#">Hoa lễ Valentine</a>
-														</li>
-														<li id="menu-item-626"
-															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-626">
-															<a href="#">Hoa ngày nhà giáo
-																Việt Nam</a>
-														</li>
+														<?php endforeach;?>
 													</ul>
 												</li>
 												<li id="menu-item-409"
