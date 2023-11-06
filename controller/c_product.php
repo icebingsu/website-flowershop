@@ -10,6 +10,15 @@ if(isset($_GET['act'])){
          case 'productAll':
          include_once "model/m_product.php";
          $nhomsanpham_product = danhmuc();
+        if(isset($_GET['id_danhmuc'])){
+         if($_GET['id_danhmuc']){
+            // $sanphamlienquan = sanphamlienquan($_GET['id_danhmuc']);
+            $tatcahoa = sanphamlienquan($_GET['id_danhmuc']);
+         }
+        }
+        else{
+         $tatcahoa = sanpham();
+      }
          $view_name ="product_productAll";
          break;
       default:

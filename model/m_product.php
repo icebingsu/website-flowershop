@@ -52,5 +52,16 @@
    function danhmuc(){
       return pdo_query("SELECT * FROM danhmuc");
    }
+  // show san pham
+  function sanpham(){
+   return pdo_query("SELECT * FROM hoa");
+  }
+  // tìm kiếm sản phẩm
+  function search($noidung){
+    return pdo_query("SELECT * FROM hoa WHERE tenhoa LIKE ?" , '%'.$noidung.'%');
+  }
+  function search_danhmuc($id_danhmuc){
+   return pdo_query("SELECT * FROM hoa WHERE id_danhmuc = ?", $id_danhmuc);
+  }
   
 ?>

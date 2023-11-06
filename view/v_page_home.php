@@ -14,7 +14,7 @@
 											<ul id="menu-home-nhom-san-pham" class="menu menu-cat-nav mb-0">
 												<li id="menu-item-407"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-407"><a
-														href="#"><img class="lazy-load"
+														href="?mod=product&act=productAll"><img class="lazy-load"
 															src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
 															data-src="wp-content/uploads/2021/05/birthday-cake.svg" />Tất cả sản phẩm</a></li>
 												<li id="menu-item-408"
@@ -26,7 +26,7 @@
 														<?php foreach($nhomsanpham as $listsanpham):?>
 														<li id="menu-item-627"
 															class="menu-item menu-item-type-taxonomy menu-item-object-chu-de menu-item-627">
-															<a href="#"><?php echo$listsanpham['tendanhmuc']?></a>
+															<a href="?mod=product&act=productAll&id_danhmuc=<?php echo$listsanpham['id']?>"><?php echo$listsanpham['tendanhmuc']?></a>
 														</li>
 														<?php endforeach;?>
 													</ul>

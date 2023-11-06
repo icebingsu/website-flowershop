@@ -11,7 +11,24 @@ if(isset($_GET['act'])){
          $view_name = "page_home";
          break;
       case 'layout_search':
-        var_dump($_POST);
+         include_once "model/m_product.php";
+         $danhmucsearch = danhmuc();
+         $danhmuc = danhmuc();
+         $noidung = $_POST['search'];
+         $search_danhmuc = (int)$_POST['product_cat'];
+         if($noidung == ""){
+           if($search_danhmuc == 0){
+            header("location:?mod=page&act=home&search=false");
+           }
+           else{
+            $search_noidung = search_danhmuc($search_danhmuc);
+           }
+         }
+         else{
+            $search_noidung = search($noidung);
+         }
+         $search = search($noidung);
+         $view_name = "product_search";
          break;
       default:
          $_GET['act'] = "home";

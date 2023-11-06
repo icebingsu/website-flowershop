@@ -1361,7 +1361,7 @@
 													<div class="flex-col flex-grow">
 														<label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm
 															kiếm:</label>
-														<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tôi muốn tìm ..." value="" name="search" />
+														<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tôi muốn tìm ..." value="" name="search"/>
 													</div>
 													<div class="flex-col">
 														<button type="submit"  class="ux-search-submit secondary button wp-element-button icon mb-0" aria-label="Submit">
