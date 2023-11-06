@@ -21,6 +21,7 @@ if(isset($_GET['act'])){
       }
          $view_name ="product_productAll";
          break;
+         
       default:
          $_GET['act'] = "home";
          break;

@@ -81,6 +81,13 @@ if(isset($_GET['act'])){
            }
             // header("location:?mod=product&act=details&id=".$_GET['id_hoa']."&id_danhmuc=".$_GET['id_danhmuc'].""); 
             break;
+            case "thanhtoan":
+               include_once "model/m_cart.php";
+                $show_cart_thanhtoan = showcart($_SESSION['id_khachhang']);
+                $tongtiengiohang = $_GET['tongtiengiohang'];
+
+                $view_name ="product_thanhtoan";
+               break;
       default:
          $_GET['act'] = "home";
          break;

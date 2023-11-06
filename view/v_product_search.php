@@ -26,26 +26,13 @@
                                           <?php endforeach;?>
                                        </ul>
                                     </div>
-
                                     <input type="hidden" name="woof_t_chu-de" value="Chủ đề" /><!-- for red button search nav panel -->
-
                                  </div>
                               </div>
-
                               <div class="woof_submit_search_form_container">
-
-
                               </div>
-
-
-
-
                            </div>
-
                         </div>
-
-
-
                      </div>
                   </aside>
                </div>

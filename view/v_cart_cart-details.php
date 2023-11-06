@@ -234,7 +234,7 @@
 
               <div class="wc-proceed-to-checkout">
                 <a
-                  href="../thanh-toan/index.html"
+                  href="?mod=cart&act=thanhtoan&tongtiengiohang=<?php echo$tongtiengiohang?>"
                   class="checkout-button button alt wc-forward wp-element-button"
                 >
                   Tiến hành thanh toán</a
