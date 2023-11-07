@@ -22,64 +22,53 @@
       <div class="woocommerce">
          <div class="woocommerce-notices-wrapper"></div>
          <div class="woocommerce-notices-wrapper"></div>
-         <form name="checkout" method="post" class="checkout woocommerce-checkout " action="https://shophoa5.muathemewp.com/thanh-toan/" enctype="multipart/form-data">
-
+         <form name="checkout" method="post" class="checkout woocommerce-checkout " action="?mod=user&act=dathang&tongtiengiohang=<?php echo$_GET['tongtiengiohang']?>" enctype="multipart/form-data">
             <div class="row pt-0 ">
                <div class="large-7 col  ">
-
-
                   <div id="customer_details">
                      <div class="clear">
                         <div class="woocommerce-billing-fields">
-
                            <h3>Thông tin thanh toán</h3>
-
-
-
                            <div class="woocommerce-billing-fields__field-wrapper">
-                              <p class="form-row form-row-first thwcfd-field-wrapper thwcfd-field-text validate-required" id="billing_first_name_field" data-priority="10"><label for="billing_first_name" class="">Tên&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_first_name" id="billing_first_name" placeholder="" value="" autocomplete="given-name" /></span></p>
-                              <p class="form-row form-row-last thwcfd-field-wrapper thwcfd-field-text validate-required" id="billing_last_name_field" data-priority="20"><label for="billing_last_name" class="">Họ&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_last_name" id="billing_last_name" placeholder="" value="" autocomplete="family-name" /></span></p>
-                              <p class="form-row address-field form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required" id="billing_address_1_field" data-priority="50"><label for="billing_address_1" class="">Địa chỉ&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_address_1" id="billing_address_1" placeholder="Địa chỉ" value="" autocomplete="address-line1" /></span></p>
-                              <p class="form-row form-row-wide thwcfd-field-wrapper thwcfd-field-tel validate-required validate-phone" id="billing_phone_field" data-priority="100"><label for="billing_phone" class="">Số điện thoại&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="tel" class="input-text " name="billing_phone" id="billing_phone" placeholder="" value="" autocomplete="tel" /></span></p>
-                              <p class="form-row form-row-wide thwcfd-field-wrapper thwcfd-field-email validate-required validate-email" id="billing_email_field" data-priority="110"><label for="billing_email" class="">Địa chỉ email&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="" value="" autocomplete="email username" /></span></p>
+                              <p class="form-row form-row-first thwcfd-field-wrapper thwcfd-field-text validate-required" id="billing_first_name_field" data-priority="10">
+                                 <label for="billing_first_name" class="">Họ Tên&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper">
+                                 <input type="text" class="input-text " name="hoten" id="billing_first_name" placeholder="" value="<?php echo$_SESSION['tenkhachhang']?>" autocomplete="given-name" />
+                           </span>
+                              </p>
+                              <p class="form-row address-field form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required"            id="billing_address_1_field" data-priority="50">
+                                 <label for="billing_address_1" class="">Địa chỉ&nbsp;<abbr class="required" title="bắt buộc">*</abbr>
+                              </label>
+                              <span class="woocommerce-input-wrapper">
+                                 <input type="text" class="input-text " name="diachi" id="billing_address_1" placeholder="Địa chỉ" value="" autocomplete="address-line1" />
+                              </span>
+                              </p>
+                              <p class="form-row form-row-wide thwcfd-field-wrapper thwcfd-field-tel validate-required validate-phone" id="billing_phone_field" data-priority="100"><label for="billing_phone" class="">Số điện thoại&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper">
+                              <input type="tel" class="input-text " name="sodienthoai" id="billing_phone" placeholder="" value="" autocomplete="tel" />
+                              </span>
+                              </p>
+                              <p class="form-row form-row-wide thwcfd-field-wrapper thwcfd-field-email validate-required validate-email" id="billing_email_field" data-priority="110"><label for="billing_email" class="">Địa chỉ email&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="email" class="input-text " name="email" id="billing_email" placeholder="" value="<?php echo$_SESSION['email']?>" autocomplete="email username" /></span>
+                              </p>
+                              <p class="form-row form-row-wide thwcfd-field-wrapper thwcfd-field-email validate-required validate-email" id="billing_email_field" data-priority="110"><label for="billing_email" class="">Địa chỉ email&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label><span class="woocommerce-input-wrapper"><input type="hidden" class="input-text " name="tongtien" id="billing_email" placeholder="" value="<?php echo$_GET['tongtiengiohang']?>" autocomplete="email username" /></span>
+                              </p>
                            </div>
-
                         </div>
-
                      </div>
-
                      <div class="clear">
                         <div class="woocommerce-shipping-fields">
                         </div>
                         <div class="woocommerce-additional-fields">
-
-
-
                            <h3>Thông tin bổ sung</h3>
-
-
                            <div class="woocommerce-additional-fields__field-wrapper">
                               <p class="form-row notes thwcfd-field-wrapper thwcfd-field-textarea" id="order_comments_field" data-priority=""><label for="order_comments" class="">Ghi chú đơn hàng&nbsp;<span class="optional">(tuỳ chọn)</span></label><span class="woocommerce-input-wrapper"><textarea name="order_comments" class="input-text " id="order_comments" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." rows="2" cols="5"></textarea></span></p>
                            </div>
-
-
                         </div>
                      </div>
                   </div>
-
-
-
                </div>
-
                <div class="large-5 col">
-
                   <div class="col-inner has-border">
                      <div class="checkout-sidebar sm-touch-scroll">
-
-
                         <h3 id="order_review_heading">Đơn hàng của bạn</h3>
-
-
                         <div id="order_review" class="woocommerce-checkout-review-order">
                            <table class="shop_table woocommerce-checkout-review-order-table">
                               <thead>
@@ -100,23 +89,14 @@
                                  <?php endforeach?>
                               </tbody>
                               <tfoot>
-
                                  <tr class="cart-subtotal">
                                     <th>Tạm tính</th>
                                     <td><span class="woocommerce-Price-amount amount"><bdi><?php echo $tongtiengiohang?><span class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span></td>
                                  </tr>
-
-
-
-
-
-
                                  <tr class="order-total">
                                     <th>Tổng</th>
                                     <td><strong><span class="woocommerce-Price-amount amount"><bdi><?php echo $tongtiengiohang?><span class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span></strong> </td>
                                  </tr>
-
-
                               </tfoot>
                            </table>
                            <div id="payment" class="woocommerce-checkout-payment">
@@ -146,20 +126,16 @@
                                  </noscript>
                                  <div class="woocommerce-terms-and-conditions-wrapper">
                                  </div>
-                                 <button type="submit" class="button alt wp-element-button" name="woocommerce_checkout_place_order" id="place_order" value="Đặt hàng" data-value="Đặt hàng">Đặt hàng</button>
-                                 <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="a92e75ace1" /><input type="hidden" name="_wp_http_referer" value="/thanh-toan/" />
+                                 <button type="submit" class="button alt wp-element-button" name="dathang" id="place_order" value="Đặt hàng" data-value="Đặt hàng">Đặt hàng</button>
                               </div>
                            </div>
                         </div>
                         <div class="woocommerce-privacy-policy-text"></div>
                      </div>
                   </div>
-
                </div>
-
             </div>
          </form>
-
       </div>
    </div>
 

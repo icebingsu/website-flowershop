@@ -1285,7 +1285,7 @@
 											</a>
 											<ul class="nav-dropdown  nav-dropdown-simple">
 												<li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active active">
-													<a href="#">Thông tin cá nhân</a>
+													<a href="?mod=user&act=profile">Thông tin cá nhân</a>
 													<!-- empty -->
 												</li>
 												<li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
@@ -2005,7 +2005,7 @@
 									<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="c726a3ba67" /><input type="hidden" name="_wp_http_referer" value="/" /> <button type="submit" class="woocommerce-button button woocommerce-form-login__submit wp-element-button" name="login" value="Đăng nhập">Đăng nhập</button>
 								</p>
 								<p class="woocommerce-LostPassword lost_password">
-									<a href="tai-khoan/lost-password/index.html">Quên mật khẩu?</a>
+									<a href="?mod=user&act=lostpass">Quên mật khẩu?</a>
 								</p>
 							</form>
 						</div>
@@ -2013,7 +2013,6 @@
 					<div class="col-2 large-6 col pb-0">
 						<div class="account-register-inner">
 							<h3 class="uppercase">Đăng ký</h3>
-
 							<form method="post" class="woocommerce-form woocommerce-form-register register" action="?mod=user&act=register">
 								<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 									<label for="reg_email">Họ tên của bạn&nbsp;<span class="required">*</span></label>

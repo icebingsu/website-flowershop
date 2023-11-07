@@ -9,6 +9,7 @@ if (isset($_GET['act'])) {
                if (isset($_SESSION)) {
                   $_SESSION['tenkhachhang'] = $result['hoten'];
                   $_SESSION['id_khachhang'] = $result['id'];
+                  $_SESSION['email'] = $result['email'];
                   $_SESSION['dangnhap'] = true;
                   $login = "true";
                }
@@ -45,11 +46,34 @@ if (isset($_GET['act'])) {
             $_SESSION['dangnhap'] = false;
             unset($_SESSION['tenkhachhang']);
             unset($_SESSION['id_khachhang']);
+            unset( $_SESSION['email'] );
          }
          header('location:?mod=page&act=home');
          break;
       case 'lostpass':
-         
+         // chưa làm 
+         $view_name = "user-lostpassword";
+         break;
+      case 'profile':
+         // chưa làm
+         $view_name = "user_profile";
+         break;
+      case 'dathang':
+         echo "đặt hàng ở đây";
+         if(isset($_POST['dathang'])){
+            echo $_POST['hoten'];
+            echo $_POST['diachi'];
+            echo $_POST['sodienthoai'];
+            echo $_POST['email'];
+            echo $_POST['tongtien'];
+            if($_POST['hoten'] == "" || $_POST['diachi'] == "" ||  $_POST['sodienthoai'] == "" || $_POST['email'] == ""){
+               header('location:?mod=cart&act=thanhtoan&tongtiengiohang='.$_POST['tongtien'].'&dathang=false');
+            }
+            else{
+               // tiến hành thêm dữ liệu vào các bảng
+               echo "update";
+            }
+         }
          break;
       default:
          $_GET['act'] = "home";

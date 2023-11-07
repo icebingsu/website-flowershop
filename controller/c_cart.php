@@ -88,6 +88,9 @@ if(isset($_GET['act'])){
 
                 $view_name ="product_thanhtoan";
                break;
+            case 'profile':
+               $view_name = "user_profile";
+               break;
       default:
          $_GET['act'] = "home";
          break;
