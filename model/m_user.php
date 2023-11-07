@@ -12,5 +12,30 @@
    function register($hoten , $email, $matkhau){
       pdo_execute("INSERT INTO khachhang (hoten,email,matkhau) VALUES (?,?,?) ",$hoten, $email , $matkhau );
    }
- 
+   function showcartthanhtoan($id_khachhang){
+      return pdo_query("SELECT
+      hoa.*,
+      giohang.*
+    FROM
+      giohang
+    INNER JOIN
+      hoa
+    ON
+      hoa.id = giohang.id_hoa
+    WHERE
+      giohang.id_khachhang = ?"
+   , $id_khachhang);
+   }
+   function deleteAllgiohang($id_khachhang){
+      pdo_execute("DELETE FROM giohang WHERE id_khachhang = ?", $id_khachhang);
+   }
+   function dulieuthanhtoan($tenhoa,$tenkhachhang, $soluong , $giaban , $ngaydathang, $tongtiengiohang, $id_khachhang, $diachi, $sodienthoai , $email){
+      pdo_execute("INSERT INTO thanhtoan(tenhoa,tenkhachhang,soluong,giaban,ngaydathang,tongtiengiohang,id_khachhang,diachi,sodienthoai,email) value 
+      (?,?,?,?,?,?,?,?,?,?)
+      ",$tenhoa,$tenkhachhang , $soluong , $giaban, $ngaydathang, $tongtiengiohang,$id_khachhang, $diachi , $sodienthoai,$email);
+   }
+   // show thanh toan
+   function showthanhtoan($id_khachhang){
+      return pdo_query("SELECT * FROM thanhtoan WHERE id_khachhang = ?",$id_khachhang);
+   }
 ?>

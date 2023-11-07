@@ -59,19 +59,22 @@ if (isset($_GET['act'])) {
          $view_name = "user_profile";
          break;
       case 'dathang':
-         echo "đặt hàng ở đây";
          if(isset($_POST['dathang'])){
-            echo $_POST['hoten'];
-            echo $_POST['diachi'];
-            echo $_POST['sodienthoai'];
-            echo $_POST['email'];
-            echo $_POST['tongtien'];
             if($_POST['hoten'] == "" || $_POST['diachi'] == "" ||  $_POST['sodienthoai'] == "" || $_POST['email'] == ""){
                header('location:?mod=cart&act=thanhtoan&tongtiengiohang='.$_POST['tongtien'].'&dathang=false');
             }
             else{
-               // tiến hành thêm dữ liệu vào các bảng
-               echo "update";
+               include_once "model/m_user.php";
+               $showcart_thanhtoan = showcartthanhtoan($_SESSION['id_khachhang']);
+               foreach($showcart_thanhtoan as $thanhtoan){
+                  dulieuthanhtoan($thanhtoan['tenhoa'],$_SESSION['tenkhachhang'], $thanhtoan['soluong'] , $thanhtoan['giaban'] , date('Y-m-d'), $_GET['tongtiengiohang'], $_SESSION['id_khachhang'], $_POST['diachi'], $_POST['sodienthoai'] , $_POST['email']);
+               }
+               deleteAllgiohang($_SESSION['id_khachhang']);
+               $showthanhtoan = showthanhtoan($_SESSION['id_khachhang']);
+               $showthanhtoan1 = showthanhtoan($_SESSION['id_khachhang']);
+               $thanhtoan = array_shift($showthanhtoan1);
+               $tongtien = 0;
+               $view_name = "cart_thanhcong";
             }
          }
          break;

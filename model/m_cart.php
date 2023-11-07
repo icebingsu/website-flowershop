@@ -47,4 +47,7 @@ function updatesl($sl,$tongtien , $id_hoa,$id_khachhang){
 function updateslttdetails($soluong, $tongtien ,$id_hoa){
   pdo_execute('UPDATE giohang SET soluong = ?, tongtien =? WHERE id_hoa= ?',$soluong,$tongtien,$id_hoa);
 }
+function thanhtoan(){
+  
+}
 ?>

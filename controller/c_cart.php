@@ -27,7 +27,6 @@ if(isset($_GET['act'])){
          else{
             header("location:?mod=page&act=home&addtocart=false"); 
          }
-         // làm thêm css hiện toast
          break;
       case 'removecart': 
            include_once "model/m_cart.php";
@@ -85,7 +84,6 @@ if(isset($_GET['act'])){
                include_once "model/m_cart.php";
                 $show_cart_thanhtoan = showcart($_SESSION['id_khachhang']);
                 $tongtiengiohang = $_GET['tongtiengiohang'];
-
                 $view_name ="product_thanhtoan";
                break;
             case 'profile':
