@@ -90,7 +90,7 @@
                         Email: <strong> <?php echo$thanhtoan['email']?></strong>
                      </li>
                      <li class="woocommerce-order-overview__total total">
-                        Tổng cộng: <strong><span class="woocommerce-Price-amount amount"><bdi> <?php echo$thanhtoan['tongtiengiohang']?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></strong>
+                        Tổng cộng: <strong><span class="woocommerce-Price-amount amount"><bdi> <?php echo$tongtien?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></strong>
                      </li>
                      <li class="woocommerce-order-overview__payment-method method">
                         Phương thức thanh toán: <strong>Trả tiền mặt khi nhận hàng</strong>

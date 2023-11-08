@@ -89,14 +89,8 @@
 	                                    </div>
 	                                 </div>
 	                              </div>
-
-
-
 	                              <div id="col-651940560" class="col pb-0 medium-12 small-12 large-6">
 	                                 <div class="col-inner">
-
-
-
 	                                    <div class="product-title-container">
 	                                       <h1 class="product-title product_title entry-title">
 	                                          <?php echo $details['tenhoa'] ?></h1>

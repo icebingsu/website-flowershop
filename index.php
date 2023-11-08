@@ -16,6 +16,12 @@
          case 'cart':
             $ctrl_name = "cart";
             break;
+         case 'blog':
+            $ctrl_name = "blog";
+            break;
+            case 'admin':
+               $ctrl_name = "admin";
+               break;
          default:
             $ctrl_name = "page";
             $_GET['act'] = 'home';

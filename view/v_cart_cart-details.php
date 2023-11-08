@@ -88,11 +88,9 @@
                               class="woocommerce-Price-currencySymbol"
                               >.000 VND</span
                             ></bdi
-                          ></span
-                        >
+                          ></span>
                       </div>
                     </td>
-
                     <td class="product-price" data-title="Giá">
                       <span class="woocommerce-Price-amount amount"
                         ><bdi

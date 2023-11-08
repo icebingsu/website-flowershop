@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi" class="loading-site no-js">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
 	<meta charset="UTF-8" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link rel="pingback" href="xmlrpc.php" />
-	<!-- css toast --> 
+	<!-- css toast -->
 	<link rel="stylesheet" href="wp-content/themes/flatsome-child/toast.css">
 	<script>
 		(function(html) {
@@ -1145,8 +1146,9 @@
 	</style>
 </head>
 <!-- showw toast-->
+
 <body data-rsssl=1 class="home page-template page-template-page-blank page-template-page-blank-php page page-id-2 theme-flatsome woocommerce-no-js lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border mobile-submenu-slide mobile-submenu-slide-levels-1 mobile-submenu-toggle">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-dark-grayscale">
 				<feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
@@ -1271,10 +1273,10 @@
 						<div class="flex-col hide-for-medium flex-right">
 							<ul class="nav top-bar-nav nav-right nav-small  nav-divided">
 								<li id="menu-item-294" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-294 menu-item-design-default">
-									<a href="chuyen-muc/blog/index.html" class="nav-top-link">Blog</a>
+									<a href="?mod=blog&act=tintuc" class="nav-top-link">Blog</a>
 								</li>
 								<li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293 menu-item-design-default">
-									<a href="lien-he/index.html" class="nav-top-link">Liên hệ</a>
+									<a href="?mod=blog&act=lienhe" class="nav-top-link">Liên hệ</a>
 								</li>
 								<?php if (isset($_SESSION['dangnhap'])) : ?>
 									<?php if ($_SESSION['dangnhap'] == true) : ?>
@@ -1289,7 +1291,7 @@
 													<!-- empty -->
 												</li>
 												<li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
-													<a href="?mod=cart&act=cart-details">Đơn hàng</a>
+													<a href="?mod=cart&act=cart_show">Đơn hàng</a>
 												</li>
 												<li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
 													<a href="#">Tải xuống</a>
@@ -1352,19 +1354,19 @@
 												<div class="flex-row relative">
 													<div class="flex-col search-form-categories">
 														<select class="search_categories resize-select mb-0" name="product_cat">
-															<option value="0">Danh mục	</option>
-															<?php foreach($danhmuc as $danhmuc):?>
-															<option value="<?php echo$danhmuc['id']?>"><?php echo$danhmuc['tendanhmuc']?></option>
-															<?php endforeach;?>
+															<option value="0">Danh mục </option>
+															<?php foreach ($danhmuc as $danhmuc) : ?>
+																<option value="<?php echo $danhmuc['id'] ?>"><?php echo $danhmuc['tendanhmuc'] ?></option>
+															<?php endforeach; ?>
 														</select>
 													</div>
 													<div class="flex-col flex-grow">
 														<label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm
 															kiếm:</label>
-														<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tôi muốn tìm ..." value="" name="search"/>
+														<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tôi muốn tìm ..." value="" name="search" />
 													</div>
 													<div class="flex-col">
-														<button type="submit"  class="ux-search-submit secondary button wp-element-button icon mb-0" aria-label="Submit">
+														<button type="submit" class="ux-search-submit secondary button wp-element-button icon mb-0" aria-label="Submit">
 															<i class="icon-search"></i> </button>
 													</div>
 												</div>
@@ -1376,7 +1378,7 @@
 							</ul>
 						</div>
 						<!-- Right Elements -->
-						
+
 						<div class="flex-col hide-for-medium flex-right">
 							<ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
 								<li class="cart-item has-icon">
@@ -1395,43 +1397,45 @@
 												<div class="is-divider"></div>
 											</div>
 											<!--  nếu chưa đăng nhập hiện cái này-->
-											<?php if(isset($_SESSION['dangnhap'])) :?>
-												<?php if($_SESSION['dangnhap'] == false):?>
-											<div class="widget_shopping_cart_content">
-												<p class="woocommerce-mini-cart__empty-message">
-													vui lòng đăng nhập
-												</p>
-											</div>
-												<?php elseif($_SESSION['dangnhap'] == true):?>
-											<!-- nếu đăng nhập rồi hiền cái dưới này-->
-											<div class="widget_shopping_cart_content">
-												<ul class="woocommerce-mini-cart cart_list product_list_widget ">
-													<!-- show cart bắt buộc phải viết php ở đây vì trang không được load lại-->
-													<?php 
-													include_once "model/m_cart.php";
-													if(isset($_SESSION['id_khachhang'])){
-														$showcart = showcart($_SESSION['id_khachhang']);
-														if(isset($_SESSION['tongtientatcasanpham'])){
-															$_SESSION['tongtientatcasanpham'] = 0;
-														}
-													}
-													?>
-													<?php foreach($showcart as $showcart):?>
-														<?php $_SESSION['tongtientatcasanpham']+= $showcart['tongtien']?>
-													<li class="woocommerce-mini-cart-item mini_cart_item">
-														<a href="?mod=cart&act=removecart&id_hoa=<?php echo$showcart['id_hoa']?>&id_khachhang=<?php echo$showcart['id_khachhang']?>" class="remove remove_from_cart_button" aria-label="Xóa sản phẩm này" data-product_id="368" data-cart_item_key="cf004fdc76fa1a4f25f62e0eb5261ca3" data-product_sku="">&times;</a> <a href="san-pham/pink-moon/index.html">
-															<img width="300" height="300" src="wp-content/uploads/2021/05/<?php echo $showcart['anhhoa']?>" data-src="wp-content/uploads/2021/05/<?php echo $showcart['anhhoa']?>" class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="" data-srcset="wp-content/uploads/2021/05/<?php echo $showcart['anhhoa']?>" sizes="(max-width: 300px) 100vw, 300px" /><?php echo$showcart['tenhoa'] ?> </a>
-														<span class="quantity"><?php echo $showcart['soluong'] ?> &times; <span class="woocommerce-Price-amount amount"><bdi><?php echo$showcart['tongtien']?><span class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span></span>
-													</li>	
-													<?php endforeach;?>
-												</ul>
-												<p class="woocommerce-mini-cart__total total">
-													<strong>Tổng số phụ:</strong> <span class="woocommerce-Price-amount amount"><bdi><?php if(isset($_SESSION['tongtientatcasanpham'])){ echo $_SESSION['tongtientatcasanpham'];}?><span class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span>
-												</p>
-												<p class="woocommerce-mini-cart__buttons buttons"><a href="?mod=cart&act=cart-details" class="button wc-forward wp-element-button">Xem giỏ hàng</a><a href="thanh-toan/index.html" class="button checkout wc-forward wp-element-button">Thanh toán</a></p>
-											</div>
-											<?php endif;?>
-											<?php endif;?>
+											<?php if (isset($_SESSION['dangnhap'])) : ?>
+												<?php if ($_SESSION['dangnhap'] == false) : ?>
+													<div class="widget_shopping_cart_content">
+														<p class="woocommerce-mini-cart__empty-message">
+															vui lòng đăng nhập
+														</p>
+													</div>
+												<?php elseif ($_SESSION['dangnhap'] == true) : ?>
+													<!-- nếu đăng nhập rồi hiền cái dưới này-->
+													<div class="widget_shopping_cart_content">
+														<ul class="woocommerce-mini-cart cart_list product_list_widget ">
+															<!-- show cart bắt buộc phải viết php ở đây vì trang không được load lại-->
+															<?php
+															include_once "model/m_cart.php";
+															if (isset($_SESSION['id_khachhang'])) {
+																$showcart = showcart($_SESSION['id_khachhang']);
+																if (isset($_SESSION['tongtientatcasanpham'])) {
+																	$_SESSION['tongtientatcasanpham'] = 0;
+																}
+															}
+															?>
+															<?php foreach ($showcart as $showcart) : ?>
+																<?php $_SESSION['tongtientatcasanpham'] += $showcart['tongtien'] ?>
+																<li class="woocommerce-mini-cart-item mini_cart_item">
+																	<a href="?mod=cart&act=removecart&id_hoa=<?php echo $showcart['id_hoa'] ?>&id_khachhang=<?php echo $showcart['id_khachhang'] ?>" class="remove remove_from_cart_button" aria-label="Xóa sản phẩm này" data-product_id="368" data-cart_item_key="cf004fdc76fa1a4f25f62e0eb5261ca3" data-product_sku="">&times;</a> <a href="san-pham/pink-moon/index.html">
+																		<img width="300" height="300" src="wp-content/uploads/2021/05/<?php echo $showcart['anhhoa'] ?>" data-src="wp-content/uploads/2021/05/<?php echo $showcart['anhhoa'] ?>" class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="" data-srcset="wp-content/uploads/2021/05/<?php echo $showcart['anhhoa'] ?>" sizes="(max-width: 300px) 100vw, 300px" /><?php echo $showcart['tenhoa'] ?> </a>
+																	<span class="quantity"><?php echo $showcart['soluong'] ?> &times; <span class="woocommerce-Price-amount amount"><bdi><?php echo $showcart['tongtien'] ?><span class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span></span>
+																</li>
+															<?php endforeach; ?>
+														</ul>
+														<p class="woocommerce-mini-cart__total total">
+															<strong>Tổng số phụ:</strong> <span class="woocommerce-Price-amount amount"><bdi><?php if (isset($_SESSION['tongtientatcasanpham'])) {
+																																											echo $_SESSION['tongtientatcasanpham'];
+																																										} ?><span class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span>
+														</p>
+														<p class="woocommerce-mini-cart__buttons buttons"><a href="?mod=cart&act=cart-details" class="button wc-forward wp-element-button">Xem giỏ hàng</a><a href="?mod=cart&act=cart-details" class="button checkout wc-forward wp-element-button">Thanh toán</a></p>
+													</div>
+												<?php endif; ?>
+											<?php endif; ?>
 											<!-- hết tại đây-->
 											<div class="cart-sidebar-content relative"></div>
 										</div>
@@ -1439,9 +1443,9 @@
 								</li>
 							</ul>
 						</div>
-						<script> 
-					
-					</script>
+						<script>
+
+						</script>
 						<!-- Mobile Right Elements -->
 						<div class="flex-col show-for-medium flex-right">
 							<ul class="mobile-nav nav nav-right ">
@@ -1600,40 +1604,30 @@
 												Về chúng tôi </span>
 										</a>
 									</div>
-
-
 									<div class="ux-menu-link flex menu-item">
 										<a class="ux-menu-link__link flex" href="#">
 											<span class="ux-menu-link__text">
 												Đối tác tiêu biểu </span>
 										</a>
 									</div>
-
-
 									<div class="ux-menu-link flex menu-item">
 										<a class="ux-menu-link__link flex" href="#">
 											<span class="ux-menu-link__text">
 												Cầu hôn cùng chúng tôi </span>
 										</a>
 									</div>
-
-
 									<div class="ux-menu-link flex menu-item">
 										<a class="ux-menu-link__link flex" href="#">
 											<span class="ux-menu-link__text">
 												Doanh nghiệp </span>
 										</a>
 									</div>
-
-
 									<div class="ux-menu-link flex menu-item">
 										<a class="ux-menu-link__link flex" href="#">
 											<span class="ux-menu-link__text">
 												Hướng dẫn chăm sóc hoa </span>
 										</a>
 									</div>
-
-
 									<div class="ux-menu-link flex menu-item">
 										<a class="ux-menu-link__link flex" href="chuyen-muc/blog/index.html">
 											<span class="ux-menu-link__text">
@@ -1653,9 +1647,6 @@
 
 						<div id="col-1344970475" class="col mh-col-footer medium-4 small-12 large-2">
 							<div class="col-inner">
-
-
-
 								<div id="text-546288237" class="text footer-title">
 
 

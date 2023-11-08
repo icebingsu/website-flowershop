@@ -89,6 +89,11 @@ if(isset($_GET['act'])){
             case 'profile':
                $view_name = "user_profile";
                break;
+            case 'cart_show':
+               include_once "model/m_cart.php";
+               $showcart_thanhtoan = donhang($_SESSION['id_khachhang']);
+               $view_name = "cart_show";
+               break;
       default:
          $_GET['act'] = "home";
          break;

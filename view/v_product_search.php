@@ -1,6 +1,5 @@
 <main id="main" class="">
    <div class="row category-page-row">
-
       <div class="col large-3 hide-for-medium ">
          <div class="is-sticky-column" data-sticky-mode="javascript">
             <div class="is-sticky-column__inner">
