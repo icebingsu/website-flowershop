@@ -1294,13 +1294,13 @@
 													<a href="?mod=cart&act=cart_show">Đơn hàng</a>
 												</li>
 												<li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
-													<a href="#">Tải xuống</a>
+													<a href="?mod=cart&act=cart-details">Giỏ hàng</a>
 												</li>
 												<li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
-													<a href="#">Địa chỉ</a>
+													<a href="">Địa chỉ</a>
 												</li>
 												<li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
-													<a href="#">Tài khoản</a>
+													<a href="?mod=user&act=account">Tài khoản</a>
 												</li>
 												<li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
 													<a href="?mod=user&act=logout">Đăng xuất</a>

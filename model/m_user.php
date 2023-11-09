@@ -38,4 +38,14 @@
    function showthanhtoan($id_khachhang){
       return pdo_query("SELECT * FROM thanhtoan WHERE id_khachhang = ?",$id_khachhang);
    }
+   function thaydoithongtin($hoten,$email,$pass,$id_khachhang){
+      pdo_execute("UPDATE khachhang
+      SET hoten = ?,
+          email = ?,
+          matkhau = ?
+      WHERE id = ?",$hoten,$email,$pass,$id_khachhang);
+   }
+   function showkhachhang($id_khachhang){
+      return pdo_query("SELECT * FROM khachhang WHERE id = ?",$id_khachhang);
+   }
 ?>

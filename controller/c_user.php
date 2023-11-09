@@ -78,6 +78,30 @@ if (isset($_GET['act'])) {
             }
          }
          break;
+      case 'account':
+         include_once "model/m_user.php";
+         $hienthithongtinkhachhang = showkhachhang( $_SESSION['id_khachhang']);
+         $view_name ="user_account";
+         break;
+      case 'thaydoithongtin':
+         include_once "model/m_user.php";
+         $showkhachhang= showkhachhang( $_SESSION['id_khachhang']);
+         var_dump($_POST);
+         if(isset($_POST['doithongtin'])){
+            if($_POST['pass_hientai'] == $showkhachhang[0]['matkhau']){
+               if($_POST['passnew'] == $_POST['sosanhpassnew']){
+                  thaydoithongtin($_POST['hoten'],$_POST['email'],$_POST['passnew'], (int)$_SESSION['id_khachhang']);
+                  header("location:?mod=user&act=account&passhientai=true");
+               }
+               else{
+                  header("location:?mod=user&act=account&sosanh=true");
+               }
+            }
+            else{
+               header("location:?mod=user&act=account&passhientai=false");
+            }
+         }
+         break;
       default:
          $_GET['act'] = "home";
          break;

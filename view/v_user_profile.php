@@ -22,14 +22,14 @@
 	</div>
 					<ul id="my-account-nav" class="account-nav nav nav-line nav-uppercase nav-vertical mt-half">
       <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active active">
-          <a href="">Trang tài khoản</a>
+          <a href="?mod=user&act=profile">Trang tài khoản</a>
       <!-- empty -->
         </li>
       <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
-          <a href="">Đơn hàng</a>
+          <a href="?mod=cart&act=cart_show">Đơn hàng</a>
         </li>
       <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
-          <a href="">Giỏ hàng</a>
+          <a href="?mod=cart&act=cart-details">Giỏ hàng</a>
         </li>
       <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
           <a href="">Địa chỉ</a>

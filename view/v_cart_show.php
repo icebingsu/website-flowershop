@@ -21,26 +21,26 @@
                   </span>
                </div>
                <ul id="my-account-nav" class="account-nav nav nav-line nav-uppercase nav-vertical mt-half">
-                  <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard">
-                     <a href="https://shophoa5.muathemewp.com/tai-khoan/">Trang tài khoản</a>
-                     <!-- empty -->
-                  </li>
-                  <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders is-active active">
-                     <a href="https://shophoa5.muathemewp.com/tai-khoan/orders/">Đơn hàng</a>
-                  </li>
-                  <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
-                     <a href="https://shophoa5.muathemewp.com/tai-khoan/downloads/">Tải xuống</a>
-                  </li>
-                  <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
-                     <a href="https://shophoa5.muathemewp.com/tai-khoan/edit-address/">Địa chỉ</a>
-                  </li>
-                  <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
-                     <a href="https://shophoa5.muathemewp.com/tai-khoan/edit-account/">Tài khoản</a>
-                  </li>
-                  <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
-                     <a href="https://shophoa5.muathemewp.com/tai-khoan/customer-logout/">Thoát</a>
-                  </li>
-               </ul>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active active">
+          <a href="?mod=user&act=profile">Trang tài khoản</a>
+      <!-- empty -->
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
+          <a href="?mod=cart&act=cart_show">Đơn hàng</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
+          <a href="?mod=cart&act=cart-details">Giỏ hàng</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
+          <a href="">Địa chỉ</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
+          <a href="?mod=user&act=account">Tài khoản</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
+    <a href="">Thoát</a>
+  </li>
+					</ul>
             </div>
             <div class="large-9 col">
                <div class="woocommerce">
@@ -52,49 +52,31 @@
 											<div class="woocommerce">
 <div class="woocommerce-MyAccount-content">
 	<div class="woocommerce-notices-wrapper"></div><p>
-Đơn hàng #<mark class="order-number">640</mark> đã được đặt lúc <mark class="order-date">07/11/2023</mark> và hiện tại là <mark class="order-status">Đang xử lý</mark>.</p>
-
-
+Đơn hàng <mark class="order-number">640</mark> đã được đặt lúc <mark class="order-date"><?php echo$ngaydathang?></mark> và hiện tại là <mark class="order-status"><?php echo$tinhtrang?></mark>.</p>
 <section class="woocommerce-order-details">
-	
 	<h2 class="woocommerce-order-details__title">Chi tiết đơn hàng</h2>
-
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
-
 		<thead>
 			<tr>
 				<th class="woocommerce-table__product-name product-name">Sản phẩm</th>
 				<th class="woocommerce-table__product-table product-total">Tổng</th>
 			</tr>
 		</thead>
-
 		<tbody>
+         <?php foreach($showcart_thanhtoan as $hienthidon): ?>
 			<tr class="woocommerce-table__line-item order_item">
-
 	<td class="woocommerce-table__product-name product-name">
-		<a href="https://shophoa5.muathemewp.com/san-pham/je-taime/">Je T'aime</a> <strong class="product-quantity">×&nbsp;1</strong>	</td>
+		<a href="https://shophoa5.muathemewp.com/san-pham/je-taime/"><?php echo$hienthidon['tenhoa']?></a> <strong class="product-quantity">×&nbsp;<?php echo$hienthidon['soluong']?></strong>	</td>
 
 	<td class="woocommerce-table__product-total product-total">
-		<span class="woocommerce-Price-amount amount"><bdi>339.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>	</td>
-
-</tr>
-
-<tr class="woocommerce-table__line-item order_item">
-
-	<td class="woocommerce-table__product-name product-name">
-		<a href="https://shophoa5.muathemewp.com/san-pham/cupids-kisses/">Cupid's Kisses</a> <strong class="product-quantity">×&nbsp;1</strong>	</td>
-
-	<td class="woocommerce-table__product-total product-total">
-		<span class="woocommerce-Price-amount amount"><bdi>599.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>	</td>
-
-</tr>
-
+		<span class="woocommerce-Price-amount amount"><bdi><?php echo$hienthidon['giaban']?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>	</td>
+        </tr>
+        <?php endforeach;?>
 		</tbody>
-
 		<tfoot>
 								<tr>
 						<th scope="row">Tổng số phụ:</th>
-						<td><span class="woocommerce-Price-amount amount">938.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
+						<td><span class="woocommerce-Price-amount amount"><?php echo $tongtienthanhtoan?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
 					</tr>
 										<tr>
 						<th scope="row">Phương thức thanh toán:</th>
@@ -102,27 +84,19 @@
 					</tr>
 										<tr>
 						<th scope="row">Tổng cộng:</th>
-						<td><span class="woocommerce-Price-amount amount">938.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
+						<td><span class="woocommerce-Price-amount amount"><?php echo $tongtienthanhtoan?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
 					</tr>
 										</tfoot>
 	</table>
-
 	</section>
-
 <section class="woocommerce-customer-details">
-
-	
 	<h2 class="woocommerce-column__title">Địa chỉ thanh toán</h2>
-
 	<address>
-		Nguyễn Hùng<br>TP.HCM
-					<p class="woocommerce-customer-details--phone">0385323196</p>
+		<?php echo$_SESSION['tenkhachhang']?><br><?php echo$diachi?>
+					<p class="woocommerce-customer-details--phone"><?php echo$sdt;?></p>
 		
-					<p class="woocommerce-customer-details--email">nguyenhung050703@gmail.com</p>
+					<p class="woocommerce-customer-details--email"><?php echo$email;?></p>
 			</address>
-
-	
-	
 </section>
 </div>
 </div>
@@ -143,16 +117,16 @@
                               <tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
                                  <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Đơn hàng">
                                     <a href="https://shophoa5.muathemewp.com/tai-khoan/view-order/640/">
-                                       #555 </a>
+                                       #<?php echo$madonhang ?> </a>
                                  </td>
                                  <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Ngày">
-                                    <time datetime="2023-11-07T14:32:11+00:00">555</time>
+                                    <time datetime="2023-11-07T14:32:11+00:00"><?php echo$ngaydathang?></time>
                                  </td>
                                  <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Tình trạng">
                                     Đang xử lý
                                  </td>
                                  <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Tổng">
-                                    <span class="woocommerce-Price-amount amount">.000 VND<span class="woocommerce-Price-currencySymbol">₫</span></span> cho 2 mục
+                                    <span class="woocommerce-Price-amount amount"><?php echo$tongtienthanhtoan?>.000 VND<span class="woocommerce-Price-currencySymbol">₫</span></span> cho <?php echo$somuc?> mục
                                  </td>
                                  <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Các thao tác">
                                     <a href="?mod=cart&act=cart_show&chitiet=true" class="woocommerce-button wp-element-button button view">Xem</a>

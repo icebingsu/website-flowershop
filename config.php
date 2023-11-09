@@ -211,4 +211,95 @@
      </script>";
     }
   }
+  if(isset($_GET['passhientai'])){
+    if($_GET['passhientai'] == 'false'){
+       echo "
+       <script>
+       function showToast() {
+         var toast = document.createElement('div');
+         toast.classList.add('error');
+         var icon = document.createElement('span');
+         icon.classList.add('icon');
+         icon.innerHTML = '&#10003;';
+         var message = document.createElement('span');
+         message.innerHTML = 'mật khẩu không chính xác';
+         var closeBtn = document.createElement('span');
+         closeBtn.classList.add('close-btn');
+         toast.appendChild(message);
+         toast.appendChild(closeBtn);
+         document.body.appendChild(toast);
+         closeBtn.addEventListener('click', function() {
+           toast.remove();
+         });
+         setTimeout(function() {
+           toast.remove();
+         }, 3000);
+       }
+       document.addEventListener('DOMContentLoaded', function() {
+         showToast();
+         showToast(); 
+       });
+     </script>";
+    }
+    elseif($_GET['passhientai'] == 'true'){
+      echo "
+       <script>
+       function showToast() {
+         var toast = document.createElement('div');
+         toast.classList.add('success');
+         var icon = document.createElement('span');
+         icon.classList.add('icon');
+         icon.innerHTML = '&#10003;';
+         var message = document.createElement('span');
+         message.innerHTML = 'thay đổi mật khẩu thành công';
+         var closeBtn = document.createElement('span');
+         closeBtn.classList.add('close-btn');
+         toast.appendChild(message);
+         toast.appendChild(closeBtn);
+         document.body.appendChild(toast);
+         closeBtn.addEventListener('click', function() {
+           toast.remove();
+         });
+         setTimeout(function() {
+           toast.remove();
+         }, 3000);
+       }
+       document.addEventListener('DOMContentLoaded', function() {
+         showToast();
+         showToast(); 
+       });
+     </script>";
+    }
+  }
+  if(isset($_GET['sosanh'])){
+    if($_GET['sosanh']){
+       echo "
+       <script>
+       function showToast() {
+         var toast = document.createElement('div');
+         toast.classList.add('error');
+         var icon = document.createElement('span');
+         icon.classList.add('icon');
+         icon.innerHTML = '&#10003;';
+         var message = document.createElement('span');
+         message.innerHTML = 'mật khẩu không trùng nhau';
+         var closeBtn = document.createElement('span');
+         closeBtn.classList.add('close-btn');
+         toast.appendChild(message);
+         toast.appendChild(closeBtn);
+         document.body.appendChild(toast);
+         closeBtn.addEventListener('click', function() {
+           toast.remove();
+         });
+         setTimeout(function() {
+           toast.remove();
+         }, 3000);
+       }
+       document.addEventListener('DOMContentLoaded', function() {
+         showToast();
+         showToast(); 
+       });
+     </script>";
+    }
+  }
 ?>
