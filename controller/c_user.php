@@ -10,17 +10,24 @@ if (isset($_GET['act'])) {
                   $_SESSION['tenkhachhang'] = $result['hoten'];
                   $_SESSION['id_khachhang'] = $result['id'];
                   $_SESSION['email'] = $result['email'];
+                  $_SESSION['quyen'] = $result['quyen'];
                   $_SESSION['dangnhap'] = true;
                   $login = "true";
+                  if($_SESSION['quyen'] == 'user'){
+                     header('location:?mod=page&act=home&login='.$login.'');
+                  }
+                  elseif ($_SESSION['quyen'] == 'admin') {
+                     header('location:ADMIN/?admin=page&act=dashboard&'.$_SESSION.'');
+                     exit();
+                 }
                }
             } else {
                unset($_SESSION['tenkhachhang']);
                $_SESSION['dangnhap'] = false;
                $login= "false";
-              
+               header('location:?mod=page&act=home&login='.$login.'');
             }
-
-            header('location:?mod=page&act=home&login='.$login.'');
+          
          }
          break;
       case 'register':
@@ -47,6 +54,7 @@ if (isset($_GET['act'])) {
             unset($_SESSION['tenkhachhang']);
             unset($_SESSION['id_khachhang']);
             unset( $_SESSION['email'] );
+            unset( $_SESSION['quyen']);
          }
          header('location:?mod=page&act=home');
          break;
