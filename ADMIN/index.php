@@ -7,6 +7,9 @@ if(isset($_SESSION['quyen'])){
             case 'page':
                $ctrl = "page";
                break;
+            case 'category':
+               $ctrl = "category";
+               break;
             default:
                break;
          }

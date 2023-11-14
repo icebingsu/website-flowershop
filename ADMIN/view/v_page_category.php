@@ -48,62 +48,9 @@
                     </div>
                   </a>
                 </li>
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <!-- <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="../model/assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New album</span> by Travis Scott
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          1 day
-                        </p>
-                      </div>
-                    </div> -->
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <!-- <div class="d-flex py-1">
-                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <title>credit-card</title>
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                              <g transform="translate(1716.000000, 291.000000)">
-                                <g transform="translate(453.000000, 454.000000)">
-                                  <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
-                                  <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          Payment successfully completed
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          2 days
-                        </p>
-                      </div>
-                    </div> -->
-                  </a>
-                </li>
-                <!-- end thông báo -->
               </ul>
             </li>
             <li class="nav-item d-flex align-items-center">
-              <!-- <a href="../pages/sign-in.php" class="nav-link text-body font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Sign In</span>
-              </a> -->
             </li>
           </ul>
         </div>
@@ -111,67 +58,7 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
-      <div class="row">
-        <div class="col-12">
-          <!-- Thêm danh mục -->
-          <div class="card my-4">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Thêm danh mục</h6>
-              </div>
-            </div>
-            <div class="card-body px-0 pb-2">
-              <div class="table-responsive p-0">
-                <table class="table align-items-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7"
-                        style="width: 150px;">Hình </th>
-                      <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7">
-                        Tên
-                        danh mục</th>
-                      <th class="text-secondary text-xxs font-weight-bolder opacity-7"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="align-middle" style="text-align: center; width: 150px;">
-                        <div class="text-secondary font-weight-bold text-xs">
-                          <label class="" for="fileInput">Chọn ảnh:</label><br>
-                          <input type="file" id="fileInput" name="fileInput">
-                        </div>
-                      </td>
-                      <td style="text-align: center;">
-                        <div class="d-flex px-2 py-1" style="justify-content: center;">
-                          <div>
-                            <img src="../model/assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg"
-                              alt="user1">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <span class="text-secondary text-xs font-weight-bold"><input type="text"
-                                placeholder="Nhập tên danh mục"></span>
-                          </div>
-                        </div>
-                      </td>
-
-                      <td class="align-middle" style="text-align: center;">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user">
-                          Lưu
-                        </a>
-                      </td>
-                    </tr>
-                    <!-- end danh mục -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end thêm danh mục -->
-      <!-- danh mục -->
-      <div class="row">
+    <div class="row">
         <div class="col-12">
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -194,42 +81,106 @@
 
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Số
                         lượng sản phẩm</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Gim trang chủ</th>
+                      <th class="text-secondary text-xxs font-weight-bolder opacity-7">tool</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- danh mục ở đây -->
+                    <?php foreach($show_category as $danhmuc):?>
+                    <tr>
+                      <th class="align-middle text-center text-sm"><input type="checkbox" class="" id="checkbox1"><label
+                          for="checkbox1"> </label></th>
+                      <td>
+                        <div class="d-flex px-2 py-1" style="justify-content: center;">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm"><?php echo $danhmuc['tendanhmuc'] ?></h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold"><?php echo $danhmuc['sohoa']?></span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          <?php 
+                          if($danhmuc['gimtrangchu'] == "co"){
+                          echo "Đã gim trang chủ";}
+                          elseif($danhmuc['gimtrangchu'] == "khong"){
+                            echo "Danh mục Không được gym";
+                          }elseif($danhmuc['gimtrangchu'] == "uutien"){
+                            echo "Danh mục ưu tiên";
+                          }
+                          ?>
+                          </span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="?admin=category&act=gim&id=<?php echo $danhmuc['id']?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                          data-original-title="Edit user">
+                         Gim
+                        </a>|
+                        <a href="?admin=category&act=khonggim&id=<?php echo $danhmuc['id']?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                          data-original-title="Edit user">
+                          Không
+                        </a>
+                      </td>
+                    </tr>
+                    <?php endforeach;?>
+                    <!-- end danh mục -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end thêm danh mục -->
+      <!-- danh mục -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Thêm Danh Mục</h6>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive p-0">
+                
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7">
+                        Nhập Tên danh mục</th>
+
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Gim trang chủ</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        Ngày
-                        tạo</th>
+                        Ngày tạo</th>
                       <th class="text-secondary text-xxs font-weight-bolder opacity-7">tool</th>
                     </tr>
                   </thead>
                   <tbody>
                     <!-- danh mục ở đây -->
                     <tr>
-                      <th class="align-middle text-center text-sm"><input type="checkbox" class="" id="checkbox1"><label
-                          for="checkbox1"> </label></th>
                       <td>
                         <div class="d-flex px-2 py-1" style="justify-content: center;">
-                          <div>
-                            <img src="../model/assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg"
-                              alt="user1">
-                          </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">John Michael</h6>
+                            <input type="text" class="mb-0 text-sm" placeholder=" Danh Mục...">
                           </div>
                         </div>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="text-secondary text-xs font-weight-bold">1</span>
+                        <span class="text-secondary text-xs font-weight-bold"><input type="radio" name="gim"></span>
+                        <span class="text-secondary text-xs font-weight-bold"><input type="radio" name="gim"></span>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs font-weight-bold">01/01/2023</span>
                       </td>
                       <td class="align-middle">
+                        &nbsp 
                         <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
                           data-original-title="Edit user">
-                          Edit
-                        </a>|
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user">
-                          Del
+                          Thêm
                         </a>
                       </td>
                     </tr>

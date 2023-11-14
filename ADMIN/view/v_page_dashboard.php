@@ -203,7 +203,7 @@
               </div>
             </div>
             <div class="card-body">
-              <h6 class="mb-0 "> Lượt bán ghôm nay </h6>
+              <h6 class="mb-0 "> Lượt bán hôm nay </h6>
               <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) doanh số </p>
               <hr class="dark horizontal">
               <div class="d-flex ">
@@ -224,9 +224,9 @@
             </div>
             <div class="card-body">
               <!-- <h6 class="mb-0 ">Completed Tasks</h6> -->
-              <h6 class="mb-0 ">đ biết ghi gì</h6>
+              <h6 class="mb-0 ">Đặt hàng thành công</h6>
               <!-- <p class="text-sm ">Last Campaign Performance</p> -->
-              <p class="text-sm ">đ biết ghi gì</p>
+              <p class="text-sm ">(+15 Đơn hàng mới )</p>
               <hr class="dark horizontal">
               <div class="d-flex ">
                 <i class="material-icons text-sm my-auto me-1">schedule</i>

@@ -14,11 +14,12 @@ if (isset($_GET['mod'])) {
          $ctrl_name = "product";
          break;
       case 'cart':
-         if($_SESSION['quyen'] == "admin"){
+
+         if ($_SESSION['quyen'] == "admin") {
             echo "Bạn là ADMIN Không được đặt hàng";
-            $ctrl = "";
+            $ctrl_name = "error_admin_Category";
             // nào rảnh làm thêm phần Lỗi hiển thị cho admin nha
-         }elseif($_SESSION['quyen'] == 'user'){
+         } else {
             $ctrl_name = "cart";
          }
 
@@ -41,4 +42,3 @@ if (isset($_GET['mod'])) {
       header("location:?mod=page&act=home");
    }
 }
-?>
