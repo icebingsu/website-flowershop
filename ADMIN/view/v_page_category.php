@@ -115,14 +115,18 @@
                           </span>
                       </td>
                       <td class="align-middle">
-                        <a href="?admin=category&act=gim&id=<?php echo $danhmuc['id']?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user">
+                       <button style="background-color: #EC407A; border: none;">
+                       <a href="?admin=category&act=gim&id=<?php echo $danhmuc['id']?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                          data-original-title="Edit user" style="color:white !important">
                          Gim
-                        </a>|
+                        </a>
+                       </button>
+                        <button style="background-color: #EC407A; border: none;">
                         <a href="?admin=category&act=khonggim&id=<?php echo $danhmuc['id']?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user">
+                          data-original-title="Edit user"  style="color:white !important">
                           Không
                         </a>
+                        </button>
                       </td>
                     </tr>
                     <?php endforeach;?>
@@ -154,36 +158,32 @@
                         Nhập Tên danh mục</th>
 
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Gim trang chủ</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        Ngày tạo</th>
                       <th class="text-secondary text-xxs font-weight-bolder opacity-7">tool</th>
                     </tr>
                   </thead>
                   <tbody>
                     <!-- danh mục ở đây -->
+                    <form action="?admin=category&act=themdanhmuc" method="post">
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1" style="justify-content: center;">
                           <div class="d-flex flex-column justify-content-center">
-                            <input type="text" class="mb-0 text-sm" placeholder=" Danh Mục...">
+                            <input type="text" class="mb-0 text-sm" placeholder=" Danh Mục..." style="border: none;" width="500" name="tendanhmuc">
                           </div>
                         </div>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="text-secondary text-xs font-weight-bold"><input type="radio" name="gim"></span>
-                        <span class="text-secondary text-xs font-weight-bold"><input type="radio" name="gim"></span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">01/01/2023</span>
+                        <span class="text-secondary text-xs font-weight-bold"><label for="gim">Gim    &nbsp </label><input id="gim"type="radio" name="gim[]" value="co"></span>
+                        <span class="text-secondary text-xs font-weight-bold"><label for="khong">Không    &nbsp </label><input id="khong" type="radio" name="gim[]" value="khong"></span>
                       </td>
                       <td class="align-middle">
                         &nbsp 
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user">
-                          Thêm
-                        </a>
+                        <button style="background-color: #EC407A; border: none; color:white;">
+                         Thêm Danh Mục   
+                       </button>
                       </td>
                     </tr>
+                    </form>
                     <!-- end danh mục -->
                   </tbody>
                 </table>
@@ -203,44 +203,49 @@
             </div>
             <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
-                <table class="table align-items-center mb-0">
+               <!-- table setting -->
+               <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
-                      <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7"
-                        style="width: 150px;">Hình </th>
-                      <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7">Tên
+                      <th class="align-middle text-center text-sm" style="width: 100px;">
+                        <p class="text-xs text-secondary mb-0">Chọn tất cả</p><input type="checkbox" class=""
+                          id="checkbox1"><label for="checkbox1"></label>
+                      </th>
+                      <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7">
+                        Tên
                         danh mục</th>
-                      <th class="text-secondary text-xxs font-weight-bolder opacity-7"></th>
+
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Số
+                        lượng sản phẩm</th>
+                      <th class="text-secondary text-xxs font-weight-bolder opacity-7">tool</th>
                     </tr>
                   </thead>
                   <tbody>
+                    <!-- danh mục ở đây -->
+                    <form action="?admin=category&act=xoasuadm&id=<?php echo $danhmuc['id']?>" method="post">
+                    <?php foreach($show_category as $danhmuc):?>
                     <tr>
-                      <td class="align-middle" style="text-align: center; width: 150px;">
-                        <div class="text-secondary font-weight-bold text-xs">
-                          <label class="" for="fileInput">Chọn ảnh:</label><br>
-                          <input type="file" id="fileInput" name="fileInput">
-                        </div>
-                      </td>
-                      <td style="text-align: center;">
+                      <th class="align-middle text-center text-sm"><input type="checkbox" class="" id="checkbox1"><label
+                          for="checkbox1"> </label></th>
+                      <td>
                         <div class="d-flex px-2 py-1" style="justify-content: center;">
-                          <div>
-                            <img src="../model/assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg"
-                              alt="user1">
-                          </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <span class="text-secondary text-xs font-weight-bold"><input type="text"
-                                placeholder="Nhập tên danh mục"></span>
+                            <h6 class="mb-0 text-sm">
+                              <input type="text" style="border: none; width: 300px;"value="<?php echo $danhmuc['tendanhmuc'] ?>" name="tendanhmuc">
+                            </h6>
                           </div>
                         </div>
                       </td>
-
-                      <td class="align-middle" style="text-align: center;">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user">
-                          Lưu
-                        </a>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold"><?php echo $danhmuc['sohoa']?></span>
+                      </td>
+                      <td class="align-middle">
+                       <input type="submit"style="background-color: #EC407A; border: none;color:white; width:60px;text-align: center;" value="Sửa" name="sua" width="100">
+                       <input type="submit"style="background-color: #EC407A; border: none;color:white; width:60px;text-align: center;" value="Xóa" name="xoa" width="100">
                       </td>
                     </tr>
+                    <?php endforeach;?>
+                    </form>
                     <!-- end danh mục -->
                   </tbody>
                 </table>

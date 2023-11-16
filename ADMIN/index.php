@@ -10,6 +10,9 @@ if(isset($_SESSION['quyen'])){
             case 'category':
                $ctrl = "category";
                break;
+            case 'product':
+               $ctrl = "product";
+               break;
             default:
                break;
          }

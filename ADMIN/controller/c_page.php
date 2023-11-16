@@ -9,6 +9,10 @@
         $view_name = "page_category";
          break;
        case 'product':
+        include_once "model/m_product.php";
+         $show_product = show_product();
+         $show_name_category = sp_show_category();
+         $stt = 1;
          $view_name = "page_product";
         break;
        case 'user':
