@@ -23,3 +23,16 @@ function xoasanpham($id_hoa)
    pdo_execute("DELETE  FROM hoa
    WHERE id=?", $id_hoa);
 }
+// sửa sản phẩm
+function suasanpham($anhhoa, $tenhoa, $giaban, $giakm, $id_danhmuc, $id_hoa)
+{
+   return pdo_execute("UPDATE hoa
+   SET anhhoa = ?, tenhoa=? , giaban = ? , giakm =? ,id_danhmuc = ?
+   WHERE id = ?
+   ", $anhhoa, $tenhoa, $giaban, $giakm, $id_danhmuc, $id_hoa);
+}
+// show sản phẩm
+function showsp($id_hoa)
+{
+   return pdo_query_one("SELECT * FROM hoa where id = ?", $id_hoa);
+}

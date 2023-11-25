@@ -177,6 +177,16 @@
                </a>
             </li>
             <li class="nav-item">
+               <a class="nav-link text-white <?php if ($_GET['act'] == 'order') {
+                                                echo " active bg-gradient-primary";
+                                             } ?>" href="?admin=page&act=order">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                     <i class="material-icons opacity-10">table_view</i>
+                  </div>
+                  <span class="nav-link-text ms-1">Order</span>
+               </a>
+            </li>
+            <li class="nav-item">
                <a class="nav-link text-white <?php if ($_GET['act'] == 'user') {
                                                 echo " active bg-gradient-primary";
                                              } ?>" href="?admin=page&act=user">
@@ -608,7 +618,22 @@
          }
       });
    </script>
+   <script>
+      var buttons_sua = document.querySelectorAll('.sua');
+      var buttons_x = document.querySelectorAll('.focus-product');
 
+      buttons_sua.forEach(function(button) {
+         button.addEventListener('click', function(event) {
+            event.preventDefault();
+         });
+      });
+
+      buttons_x.forEach(function(button) {
+         button.addEventListener('click', function(event) {
+            event.preventDefault();
+         });
+      });
+   </script>
 </body>
 
 </html>

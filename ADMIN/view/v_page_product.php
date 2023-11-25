@@ -150,6 +150,7 @@
             </div>
             <div class="card-body px-0 pb-2">
                <div class="table-responsive p-0">
+
                   <table class="table align-items-center mb-0">
                      <thead>
                         <tr>
@@ -213,60 +214,61 @@
                                  </a>
                               </td>
                            </tr>
-                           <tr class="hidden" id="edit-product<?php echo $hoa['id'] ?>">
-                              <th class="align-middle text-center text-sm" style="width: 100px;">
-                                 <label for="hoa-add-<?php echo $hoa['id'] ?>">
-                                    <img src="../wp-content/uploads/2021/05/<?php echo $hoa['anhhoa'] ?>" alt="Image" id="add-myid-<?php echo $hoa['id'] ?>" style="width: 100px;
+                           <!--  tr hidden ở đây ------------------------------------------->
+                           <form action="?admin=product&act=suasp" method="post" enctype="multipart/form-data">
+                              <tr class="hidden" id="edit-product<?php echo $hoa['id'] ?>">
+                                 <th class="align-middle text-center text-sm" style="width: 100px;">
+                                    <label for="hoa-add-<?php echo $hoa['id'] ?>">
+                                       <img src="../wp-content/uploads/2021/05/<?php echo $hoa['anhhoa'] ?>" alt="Image" id="add-myid-<?php echo $hoa['id'] ?>" style="width: 100px;
           height: 100px;
           border-radius: 40px;" />
-                                 </label>
-                                 <input id="hoa-add-<?php echo $hoa['id'] ?>" type="file" style="display: none" class="add-myclass" style="width: 100px;
+                                    </label>
+                                    <input id="hoa-add-<?php echo $hoa['id'] ?>" type="file" style="display: none" class="add-myclass" name="images<?php echo $hoa['id'] ?>" multiple style="width: 100px;
           height: 100px;
           margin-top: -100px;
           opacity: 0;" />
-                              </th>
-                              <td>
-                                 <div class="d-flex px-2 py-1" style="justify-content: center;">
-                                    <div class="d-flex flex-column justify-content-center">
-                                       <h6 class="mb-0 text-sm">
-                                          <input class='sua-input' type="text" name="tenhoa" value="<?php echo $hoa['tenhoa'] ?>" />
-                                       </h6>
+                                    <input type="hidden" name="id_hoa" value="<?php echo $hoa['id'] ?>">
+                                 </th>
+                                 <td>
+                                    <div class="d-flex px-2 py-1" style="justify-content: center;">
+                                       <div class="d-flex flex-column justify-content-center">
+                                          <h6 class="mb-0 text-sm">
+                                             <input class='sua-input' type="text" name="tenhoa" value="<?php echo $hoa['tenhoa'] ?>" />
+                                          </h6>
+                                       </div>
                                     </div>
-                                 </div>
-                              </td>
-                              <td class="align-middle text-center text-sm">
-                                 <span class="text-secondary text-xs font-weight-bold"><input class='sua-input' type="text" name="giaban" value="<?php echo $hoa['giaban'] ?>" /></span>
-                              </td>
-                              <td class="align-middle text-center text-sm">
-                                 <span class="text-secondary text-xs font-weight-bold">
-                                    <?php if ($hoa['giakm'] > 0) {
-                                       echo "<input class='sua-input' type='text' name='giakm' value=" . $hoa['giakm'] . " />";
-                                    } else {
-                                       echo "<input class='sua-input' type='text' name='giakm' value='0'/>";
-                                    }
-                                    ?>
-                                 </span>
-                              </td>
-                              <td>
-                                 <select name="tendanhmuc">
-                                    <?php foreach ($show_name_category as $dm) : ?>
-                                       <option value="<?php echo $dm['id'] ?>" <?php if ($dm['tendanhmuc'] == $hoa['tendanhmuc']) {
-                                                                                    echo "selected";
-                                                                                 }
-                                                                                 ?>>
-                                          <?php echo $dm['tendanhmuc'] ?>
-                                       </option>
-                                    <?php endforeach; ?>
-                                 </select>
-                              </td>
-                              <td class="align-middle" style="text-align: center;">
-                                 <button type="submit" name="act" value="update" style="background-color: #EC407A; border: none;color:white; width:60px;text-align: center;">Lưu</button>
-                                 <button class="hide-edit-row" style="background-color: #EC407A; border: none;color:white; width:60px;text-align: center;">X</button>
-                              </td>
-                           </tr>
-                           <tr class="edit-row" id="edit-product<?php echo $hoa['id'] ?>">
-                              <!-- Các trường input và nội dung khác -->
-                           </tr>
+                                 </td>
+                                 <td class="align-middle text-center text-sm">
+                                    <span class="text-secondary text-xs font-weight-bold"><input class='sua-input' type="text" name="giaban" value="<?php echo $hoa['giaban'] ?>" /></span>
+                                 </td>
+                                 <td class="align-middle text-center text-sm">
+                                    <span class="text-secondary text-xs font-weight-bold">
+                                       <?php if ($hoa['giakm'] > 0) {
+                                          echo "<input class='sua-input' type='text' name='giakm' value=" . $hoa['giakm'] . " />";
+                                       } else {
+                                          echo "<input class='sua-input' type='text' name='giakm' value='0'/>";
+                                       }
+                                       ?>
+                                    </span>
+                                 </td>
+                                 <td>
+                                    <select name="tendanhmuc">
+                                       <?php foreach ($show_name_category as $dm) : ?>
+                                          <option value="<?php echo $dm['id'] ?>" <?php if ($dm['tendanhmuc'] == $hoa['tendanhmuc']) {
+                                                                                       echo "selected";
+                                                                                    }
+                                                                                    ?>>
+                                             <?php echo $dm['tendanhmuc'] ?>
+                                          </option>
+                                       <?php endforeach; ?>
+                                    </select>
+                                 </td>
+                                 <td class="align-middle" style="text-align: center;">
+                                    <input type="submit" name="luusp" value="lưu" style="background-color: #EC407A; border: none;color:white; width:60px;text-align: center;">
+                                    <button class="hide-edit-row focus-product" style="background-color: #EC407A; border: none;color:white; width:60px;text-align: center;">X</button>
+                                 </td>
+                              </tr>
+                           </form>
                            <script>
                               const inputFile<?php echo $hoa['id'] ?> = document.getElementById(
                                  "hoa-add-<?php echo $hoa['id'] ?>");
@@ -291,6 +293,7 @@
                         <?php endforeach; ?>
                      </tbody>
                   </table>
+
                </div>
             </div>
          </div>

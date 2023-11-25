@@ -1459,16 +1459,18 @@
                                     <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                                        <!-- show cart bắt buộc phải viết php ở đây vì trang không được load lại-->
                                        <?php
-															include_once "model/m_cart.php";
-															if (isset($_SESSION['id_khachhang'])) {
-																$showcart = showcart($_SESSION['id_khachhang']);
-																if (isset($_SESSION['tongtientatcasanpham'])) {
-																	$_SESSION['tongtientatcasanpham'] = 0;
-																}
-															}
-															?>
+                                             include_once "model/m_cart.php";
+                                             if (isset($_SESSION['id_khachhang'])) {
+                                                $showcart = showcart($_SESSION['id_khachhang']);
+                                                if (isset($_SESSION['tongtientatcasanpham'])) {
+                                                   $_SESSION['tongtientatcasanpham'] = 0;
+                                                }
+                                             }
+                                             ?>
                                        <?php foreach ($showcart as $showcart) : ?>
-                                       <?php $_SESSION['tongtientatcasanpham'] += $showcart['tongtien'] ?>
+                                       <?php if (isset($_SESSION['tongtientatcasanpham'])) {
+                                                   $_SESSION['tongtientatcasanpham'] += $showcart['tongtien'];
+                                                } ?>
                                        <li class="woocommerce-mini-cart-item mini_cart_item">
                                           <a href="?mod=cart&act=removecart&id_hoa=<?php echo $showcart['id_hoa'] ?>&id_khachhang=<?php echo $showcart['id_khachhang'] ?>"
                                              class="remove remove_from_cart_button" aria-label="Xóa sản phẩm này"
@@ -1490,9 +1492,11 @@
                                        <?php endforeach; ?>
                                     </ul>
                                     <p class="woocommerce-mini-cart__total total">
-                                       <strong>Tổng số phụ:</strong> <span class="woocommerce-Price-amount amount"><bdi><?php if (isset($_SESSION['tongtientatcasanpham'])) {
-																																											echo $_SESSION['tongtientatcasanpham'];
-																																										} ?><span class="woocommerce-Price-currencySymbol">.000
+                                       <strong>Tổng số phụ:</strong> <span
+                                          class="woocommerce-Price-amount amount"><bdi><?php if (isset($_SESSION['tongtientatcasanpham'])) {
+                                                                                                                                 echo $_SESSION['tongtientatcasanpham'];
+                                                                                                                              } ?><span
+                                                class="woocommerce-Price-currencySymbol">.000
                                                 VND</span></bdi></span>
                                     </p>
                                     <p class="woocommerce-mini-cart__buttons buttons"><a
@@ -1578,8 +1582,8 @@
          </div>
       </header>
       <?php
-		include_once "view/v_$view_name.php"
-		?>
+      include_once "view/v_$view_name.php"
+      ?>
       <footer id="footer" class="footer-wrapper">
 
          <section class="section pb-0" id="section_1033527134">
