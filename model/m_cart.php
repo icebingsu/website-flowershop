@@ -62,5 +62,13 @@ function updateslttdetails($soluong, $tongtien, $id_hoa)
 }
 function donhang($id_khachhang)
 {
-  return pdo_query("SELECT * FROM thanhtoan WHERE id_khachhang = ?", $id_khachhang);
+  return pdo_query("SELECT * FROM donhang WHERE id_khachhang = ?", $id_khachhang);
+}
+function showthanhtoan($id_khachhang, $id_donhang)
+{
+  return pdo_query("SELECT * FROM thanhtoan WHERE id_khachhang = ? AND  id_donhang = ? ", $id_khachhang, $id_donhang);
+}
+function showthanhtoan_one($id_khachhang, $id_donhang)
+{
+  return pdo_query_one("SELECT * FROM thanhtoan WHERE id_khachhang = ? AND  id_donhang = ? ", $id_khachhang, $id_donhang);
 }

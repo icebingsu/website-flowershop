@@ -1,5 +1,5 @@
-<?php 
-if(isset($_GET['act'])){
+<?php
+if (isset($_GET['act'])) {
    switch ($_GET['act']) {
       case 'home':
          include_once "model/m_product.php";
@@ -8,6 +8,7 @@ if(isset($_GET['act'])){
          $flowerKM = flowerKM();
          $danhmuc = danhmuc();
          $nhomsanpham = $danhmuc;
+
          $view_name = "page_home";
          break;
       case 'layout_search':
@@ -16,15 +17,13 @@ if(isset($_GET['act'])){
          $danhmuc = danhmuc();
          $noidung = $_POST['search'];
          $search_danhmuc = (int)$_POST['product_cat'];
-         if($noidung == ""){
-           if($search_danhmuc == 0){
-            header("location:?mod=page&act=home&search=false");
-           }
-           else{
-            $search_noidung = search_danhmuc($search_danhmuc);
-           }
-         }
-         else{
+         if ($noidung == "") {
+            if ($search_danhmuc == 0) {
+               header("location:?mod=page&act=home&search=false");
+            } else {
+               $search_noidung = search_danhmuc($search_danhmuc);
+            }
+         } else {
             $search_noidung = search($noidung);
          }
          $search = search($noidung);
@@ -36,5 +35,3 @@ if(isset($_GET['act'])){
    }
    include_once "view/layout.php";
 }
-
-?>

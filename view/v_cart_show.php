@@ -17,7 +17,7 @@
                   <span class="image mr-half inline-block">
                   </span>
                   <span class="user-name inline-block">
-                     nguyenhung050703 <em class="user-id op-5">#5</em>
+                     <?php echo $_SESSION['tenkhachhang'] ?> <em class="user-id op-5">#5</em>
                   </span>
                </div>
                <ul id="my-account-nav" class="account-nav nav nav-line nav-uppercase nav-vertical mt-half">
@@ -38,7 +38,7 @@
                      <a href="?mod=user&act=account">Tài khoản</a>
                   </li>
                   <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
-                     <a href="">Thoát</a>
+                     <a href="?mod=page&act=home">Thoát</a>
                   </li>
                </ul>
             </div>
@@ -53,7 +53,7 @@
                                  <div class="woocommerce-MyAccount-content">
                                     <div class="woocommerce-notices-wrapper"></div>
                                     <p>
-                                       Đơn hàng <mark class="order-number">640</mark> đã được đặt lúc <mark class="order-date"><?php echo $ngaydathang ?></mark> và hiện tại là <mark class="order-status"><?php echo $tinhtrang ?></mark>.</p>
+                                       Đơn hàng <mark class="order-number">640</mark> đã được đặt lúc <mark class="order-date">ngày đặt hàng</mark> và hiện tại là <mark class="order-status">Đang sử ly </mark>.</p>
                                     <section class="woocommerce-order-details">
                                        <h2 class="woocommerce-order-details__title">Chi tiết đơn hàng</h2>
                                        <table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
@@ -64,7 +64,11 @@
                                              </tr>
                                           </thead>
                                           <tbody>
-                                             <?php foreach ($showcart_thanhtoan as $hienthidon) : ?>
+                                             <?php foreach ($thanhtoan as $hienthidon) : ?>
+                                                <?php
+                                                $giasp = $hienthidon['giaban'] * $hienthidon['soluong'];
+                                                $giatien += $giasp;
+                                                ?>
                                                 <tr class="woocommerce-table__line-item order_item">
                                                    <td class="woocommerce-table__product-name product-name">
                                                       <a href="https://shophoa5.muathemewp.com/san-pham/je-taime/"><?php echo $hienthidon['tenhoa'] ?></a>
@@ -72,23 +76,19 @@
                                                    </td>
 
                                                    <td class="woocommerce-table__product-total product-total">
-                                                      <span class="woocommerce-Price-amount amount"><bdi><?php echo $hienthidon['giaban'] ?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>
+                                                      <span class="woocommerce-Price-amount amount"><bdi><?php echo $giasp ?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>
                                                    </td>
                                                 </tr>
                                              <?php endforeach; ?>
                                           </tbody>
                                           <tfoot>
                                              <tr>
-                                                <th scope="row">Tổng số phụ:</th>
-                                                <td><span class="woocommerce-Price-amount amount"><?php echo $tongtienthanhtoan ?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
-                                             </tr>
-                                             <tr>
                                                 <th scope="row">Phương thức thanh toán:</th>
                                                 <td>Trả tiền mặt khi nhận hàng</td>
                                              </tr>
                                              <tr>
                                                 <th scope="row">Tổng cộng:</th>
-                                                <td><span class="woocommerce-Price-amount amount"><?php echo $tongtienthanhtoan ?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
+                                                <td><span class="woocommerce-Price-amount amount"><?php echo $giatien ?>.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
                                              </tr>
                                           </tfoot>
                                        </table>
@@ -96,10 +96,13 @@
                                     <section class="woocommerce-customer-details">
                                        <h2 class="woocommerce-column__title">Địa chỉ thanh toán</h2>
                                        <address>
-                                          <?php echo $_SESSION['tenkhachhang'] ?><br><?php echo $diachi ?>
-                                          <p class="woocommerce-customer-details--phone"><?php echo $sdt; ?></p>
+                                          <?php echo $_SESSION['tenkhachhang'] ?><br>
+                                          <?php echo $thanhtoan_one['diachi'] ?>
+                                          <p class="woocommerce-customer-details--phone">
+                                             <?php echo $thanhtoan_one['sodienthoai'] ?></p>
 
-                                          <p class="woocommerce-customer-details--email"><?php echo $email; ?></p>
+                                          <p class="woocommerce-customer-details--email">
+                                             <?php echo $thanhtoan_one['email'] ?></p>
                                        </address>
                                     </section>
                                  </div>
@@ -108,19 +111,18 @@
                         <?php else : ?>
                            <table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
                               <thead>
-
                                  <tr>
                                     <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number">
                                        <span class="nobr">Đơn hàng</span>
                                     </th>
                                     <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-date">
-                                       <span class="nobr">Ngày</span>
+                                       <span class="nobr">Ngày đặt hàng</span>
                                     </th>
                                     <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-status">
                                        <span class="nobr">Tình trạng</span>
                                     </th>
-                                    <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-total">
-                                       <span class="nobr">Tổng</span>
+                                    <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-status">
+                                       <span class="nobr">Tên Khách Hàng</span>
                                     </th>
                                     <th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-actions">
                                        <span class="nobr">Các thao tác</span>
@@ -128,25 +130,25 @@
                                  </tr>
                               </thead>
                               <tbody>
-                                 <?php foreach ($showcart_thanhtoan as $thanhtoan) : ?>
+                                 <?php foreach ($donhang as $donhang) : ?>
                                     <tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
                                        <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Đơn hàng">
                                           <a href="https://shophoa5.muathemewp.com/tai-khoan/view-order/640/">
-                                             #<?php echo $thanhtoan['id_thanhtoan'] ?> </a>
+                                             #<?php echo $donhang['id_donhang'] ?> </a>
                                        </td>
                                        <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Ngày">
-                                          <time datetime="2023-11-07T14:32:11+00:00"><?php echo $thanhtoan['ngaydathang'] ?></time>
+                                          <time datetime="2023-11-07T14:32:11+00:00"><?php
+                                                                                       date_default_timezone_set('Asia/Ho_Chi_Minh');
+                                                                                       echo DATE('Y-m-d') ?></time>
                                        </td>
                                        <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Tình trạng">
-                                          Đang xử lý
+                                          <?php echo $donhang['trangthai'] ?>
                                        </td>
-                                       <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Tổng">
-                                          <span class="woocommerce-Price-amount amount"><?php echo $thanhtoan['tongtiengiohang'] ?>.000
-                                             VND<span class="woocommerce-Price-currencySymbol">₫</span></span> cho
-                                          <?php echo $thanhtoan['soluong'] ?> mục
+                                       <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Ngày">
+                                          <time datetime="2023-11-07T14:32:11+00:00"><?php echo $_SESSION['tenkhachhang'] ?></time>
                                        </td>
                                        <td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Các thao tác">
-                                          <a href="?mod=cart&act=cart_show&chitiet=true" class="woocommerce-button wp-element-button button view">Xem</a>
+                                          <a href="?mod=cart&act=cart_show&id_donhang=<?php echo $donhang['id_donhang'] ?>&chitiet=true" class="woocommerce-button wp-element-button button view">Xem</a>
                                        </td>
                                     </tr>
                                  <?php endforeach; ?>

@@ -27898,5 +27898,73 @@ pre[class*="language-"] {
     overflow: auto !important;
   }
 }
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+.select-wrapper select {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #555;
+  pointer-events: none;
+}
+
+/* Style the dropdown arrow on hover */
+.select-wrapper:hover::after {
+  color: #000;
+}
+
+/* Style the selected option */
+.select-wrapper select option[selected] {
+  font-weight: bold;
+}
+
+/* Style the options */
+.select-wrapper select option {
+  font-weight: normal;
+}
+
+.filter-input {
+  margin-top: 10px;
+}
+
+.filter-input input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  background-color: #2b322b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: rgb(124, 166, 171);
+}
+
 
 /*# sourceMappingURL=dashboard-free.css.map */

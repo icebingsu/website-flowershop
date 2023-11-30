@@ -86,22 +86,13 @@ if (isset($_GET['act'])) {
          break;
       case 'cart_show':
          include_once "model/m_cart.php";
-         $showcart_thanhtoan = donhang($_SESSION['id_khachhang']);
-         $tongtienthanhtoan = 0;
-         $somuc = 0;
-         $ngaydathang = "";
-         $diachi = "";
-         $sdt = "";
-         $email = "";
-         $tinhtrang = "";
-         foreach ($showcart_thanhtoan as $tongtien_thanhtoan) {
-            $tongtienthanhtoan += (int)$tongtien_thanhtoan['tongtiengiohang'];
-            $ngaydathang = $tongtien_thanhtoan['ngaydathang'];
-            $somuc++;
-            $diachi = $tongtien_thanhtoan['diachi'];
-            $sdt = $tongtien_thanhtoan['sodienthoai'];
-            $email = $tongtien_thanhtoan['email'];
-            $tinhtrang = $tongtien_thanhtoan['tinhtrang'];
+
+         $donhang = donhang($_SESSION['id_khachhang']);
+         $giatien = 0;
+         if (isset($_GET['id_donhang'])) {
+            $id_donhang = intval($_GET['id_donhang']);
+            $thanhtoan = showthanhtoan($_SESSION['id_khachhang'], $id_donhang);
+            $thanhtoan_one = showthanhtoan_one($_SESSION['id_khachhang'], $id_donhang);
          }
          $view_name = "cart_show";
          break;

@@ -230,7 +230,6 @@
 
 
 
-
    <div class="fixed-plugin">
       <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
          <i class="material-icons py-2">settings</i>
@@ -302,20 +301,22 @@
    <script src="theme-admin/model/assets/js/plugins/perfect-scrollbar.min.js"></script>
    <script src="theme-admin/model/assets/js/plugins/smooth-scrollbar.min.js"></script>
    <script src="theme-admin/model/assets/js/plugins/chartjs.min.js"></script>
+
    <script>
+      var donhangtrongtuan = <?php echo $donhangtrongtuanJson; ?>;
       var ctx = document.getElementById("chart-bars").getContext("2d");
       new Chart(ctx, {
          type: "bar",
          data: {
-            labels: ["M", "T", "W", "T", "F", "S", "S"],
+            labels: ["T2", "T3", "T4", "T5", "T6", "T7", "CN"],
             datasets: [{
-               label: "Sales",
+               label: "Đơn Hàng",
                tension: 0.4,
                borderWidth: 0,
                borderRadius: 4,
                borderSkipped: false,
                backgroundColor: "rgba(255, 255, 255, .8)",
-               data: [50, 20, 10, 22, 50, 10, 40],
+               data: donhangtrongtuan,
                maxBarThickness: 6
             }, ],
          },
@@ -384,13 +385,13 @@
 
 
       var ctx2 = document.getElementById("chart-line").getContext("2d");
-
+      var donhangdabantrongtuan = <?php echo $donhangdabantrongtuanJson; ?>;
       new Chart(ctx2, {
          type: "line",
          data: {
-            labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            labels: ["T1", "T2", "T3", "T4", "T5", "T6", "T7"],
             datasets: [{
-               label: "Mobile apps",
+               label: "Sản phẩm đã bán",
                tension: 0,
                borderWidth: 0,
                pointRadius: 5,
@@ -401,7 +402,7 @@
                borderWidth: 4,
                backgroundColor: "transparent",
                fill: true,
-               data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+               data: donhangdabantrongtuan,
                maxBarThickness: 6
 
             }],
@@ -467,13 +468,13 @@
       });
 
       var ctx3 = document.getElementById("chart-line-tasks").getContext("2d");
-
+      var tongtiencacngaytrongtuan = <?php echo $tongtiencacngaytrongtuanJson; ?>;
       new Chart(ctx3, {
          type: "line",
          data: {
-            labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            labels: ["T2", "T3", "T4", "T5", "T6", "T7", "CN"],
             datasets: [{
-               label: "Mobile apps",
+               label: "Bán được trong ngày",
                tension: 0,
                borderWidth: 0,
                pointRadius: 5,
@@ -483,7 +484,7 @@
                borderWidth: 4,
                backgroundColor: "transparent",
                fill: true,
-               data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+               data: tongtiencacngaytrongtuan,
                maxBarThickness: 6
 
             }],
@@ -548,6 +549,7 @@
          },
       });
    </script>
+
    <script>
       var win = navigator.platform.indexOf('Win') > -1;
       if (win && document.querySelector('#sidenav-scrollbar')) {

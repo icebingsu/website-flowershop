@@ -16,16 +16,17 @@
                                  <div class="woof_container_inner woof_container_inner_ch">
                                     <div class="woof_block_html_items">
                                        <ul class="woof_list woof_list_checkbox">
-                                          <?php foreach($danhmucsearch as $danhmuc):?>
-                                          <li class="woof_term_58 ">
-                                             <input type="checkbox" id="woof_58_653fa8810da19" class="woof_checkbox_term woof_checkbox_term_58" data-tax="chu-de" name="hoa-dam-cuoi" data-term-id="58" value="58" />
-                                             <label class="woof_checkbox_label " for="woof_58_653fa8810da19"><?php echo$danhmuc['tendanhmuc']?><span class="woof_checkbox_count">(1)</span></label>
-                                             <input type="hidden" value="Hoa đám cưới" data-anchor="woof_n_chu-de_hoa-dam-cuoi" />
-                                          </li>
-                                          <?php endforeach;?>
+                                          <?php foreach ($danhmucsearch as $danhmuc) : ?>
+                                             <li class="woof_term_58 ">
+                                                <input type="checkbox" id="woof_58_653fa8810da19" class="woof_checkbox_term woof_checkbox_term_58" data-tax="chu-de" name="hoa-dam-cuoi" data-term-id="58" value="58" />
+                                                <label class="woof_checkbox_label " for="woof_58_653fa8810da19"><a href="?mod=product&act=productAll&id_danhmuc=<?php echo $danhmuc['id'] ?>"><?php echo $danhmuc['tendanhmuc'] ?></a><span class="woof_checkbox_count">(1)</span></label>
+                                                <input type="hidden" value="Hoa đám cưới" data-anchor="woof_n_chu-de_hoa-dam-cuoi" />
+                                             </li>
+                                          <?php endforeach; ?>
                                        </ul>
                                     </div>
-                                    <input type="hidden" name="woof_t_chu-de" value="Chủ đề" /><!-- for red button search nav panel -->
+                                    <input type="hidden" name="woof_t_chu-de" value="Chủ đề" />
+                                    <!-- for red button search nav panel -->
                                  </div>
                               </div>
                               <div class="woof_submit_search_form_container">
@@ -71,39 +72,41 @@
             <div class="woof_products_top_panel"></div>
             <div class="woocommerce-notices-wrapper"></div>
             <div class="products row row-small large-columns-4 medium-columns-3 small-columns-2 equalize-box">
-               <?php foreach($search_noidung as $search):?>
-               <div class="product-small col has-hover product type-product post-363 status-publish first instock product_cat-hoa-violet has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                  <div class="col-inner">
-                     <div class="badge-container absolute left top z-1">
-                     </div>
-                     <div class="product-small box ">
-                        <div class="box-image">
-                           <div class="image-none">
-                              <a href="../../san-pham/violet-lover/index.html" aria-label="Violet Lover">
-                                 <img width="300" height="300" src="wp-content/uploads/2021/05/<?php echo $search['anhhoa'] ?>" data-src="wp-content/uploads/2021/05/<?php echo $search['anhhoa'] ?>" class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="" data-srcset="wp-content/uploads/2021/05/<?php echo $search['anhhoa'] ?>" /> </a>
-                           </div>
-                           <div class="image-tools is-small top right show-on-hover">
-                           </div>
-                           <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                           </div>
-                           <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                           </div>
+               <?php foreach ($search_noidung as $search) : ?>
+                  <div class="product-small col has-hover product type-product post-363 status-publish first instock product_cat-hoa-violet has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                     <div class="col-inner">
+                        <div class="badge-container absolute left top z-1">
                         </div>
+                        <div class="product-small box ">
+                           <div class="box-image">
+                              <div class="image-none">
+                                 <a href="?mod=product&act=details&id=<?php echo $search['id'] ?>&id_danhmuc=7" aria-label="Violet Lover">
+                                    <img width="300" height="300" src="wp-content/uploads/2021/05/<?php echo $search['anhhoa'] ?>" data-src="wp-content/uploads/2021/05/<?php echo $search['anhhoa'] ?>" class="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="" data-srcset="wp-content/uploads/2021/05/<?php echo $search['anhhoa'] ?>" /> </a>
+                              </div>
+                              <div class="image-tools is-small top right show-on-hover">
+                              </div>
+                              <div class="image-tools is-small hide-for-small bottom left show-on-hover">
+                              </div>
+                              <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                              </div>
+                           </div>
 
-                        <div class="box-text box-text-products">
-                           <div class="title-wrapper">
-                              <p class="name product-title woocommerce-loop-product__title"><a href="../../san-pham/violet-lover/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><?php echo$search['tenhoa']?></a></p>
+                           <div class="box-text box-text-products">
+                              <div class="title-wrapper">
+                                 <p class="name product-title woocommerce-loop-product__title"><a href="?mod=product&act=details&id=<?php echo $search['id'] ?>&id_danhmuc=7" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><?php echo $search['tenhoa'] ?></a>
+                                 </p>
+                              </div>
+                              <div class="price-wrapper">
+                                 <span class="price"><span class="woocommerce-Price-amount amount"><bdi><?php echo $search['giaban'] ?><span class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span></span>
+                              </div>
+                              <div class="add-to-cart-button"><a href="index6900.html?add-to-cart=363" data-quantity="1" class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="363" data-product_sku="" aria-label="Thêm &ldquo;Violet Lover&rdquo; vào giỏ hàng" rel="nofollow">Thêm vào giỏ
+                                    hàng</a></div>
                            </div>
-                           <div class="price-wrapper">
-                              <span class="price"><span class="woocommerce-Price-amount amount"><bdi><?php echo$search['giaban']?><span class="woocommerce-Price-currencySymbol">.000 VND</span></bdi></span></span>
-                           </div>
-                           <div class="add-to-cart-button"><a href="index6900.html?add-to-cart=363" data-quantity="1" class="primary is-small mb-0 button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="363" data-product_sku="" aria-label="Thêm &ldquo;Violet Lover&rdquo; vào giỏ hàng" rel="nofollow">Thêm vào giỏ hàng</a></div>
                         </div>
                      </div>
                   </div>
-               </div>
 
-               <?php endforeach;?>
+               <?php endforeach; ?>
             </div><!-- row -->
          </div><!-- shop container -->
       </div>

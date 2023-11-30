@@ -4,7 +4,7 @@ function show_product()
 {
    return pdo_query("SELECT hoa.*, danhmuc.tendanhmuc
    FROM hoa
-   INNER JOIN danhmuc ON hoa.id_danhmuc = danhmuc.id;");
+   INNER JOIN danhmuc ON hoa.id_danhmuc = danhmuc.id");
 };
 // show sản phẩm 
 function sp_show_category()
@@ -35,4 +35,34 @@ function suasanpham($anhhoa, $tenhoa, $giaban, $giakm, $id_danhmuc, $id_hoa)
 function showsp($id_hoa)
 {
    return pdo_query_one("SELECT * FROM hoa where id = ?", $id_hoa);
+}
+// show 10 sản phẩm mới nhất 
+function sanphammoi10()
+{
+   return pdo_query("SELECT hoa.*, danhmuc.tendanhmuc
+   FROM hoa
+   INNER JOIN danhmuc ON hoa.id_danhmuc = danhmuc.id
+   ORDER BY hoa.id DESC
+   LIMIT 10;");
+}
+function sanphamgiabancaodenthap()
+{
+   return pdo_query("SELECT hoa.*, danhmuc.tendanhmuc
+   FROM hoa
+   INNER JOIN danhmuc ON hoa.id_danhmuc = danhmuc.id
+   ORDER BY hoa.giaban DESC");
+}
+function sanphamgiabanthapdencao()
+{
+   return pdo_query("SELECT hoa.*, danhmuc.tendanhmuc
+   FROM hoa
+   INNER JOIN danhmuc ON hoa.id_danhmuc = danhmuc.id
+   ORDER BY hoa.giaban");
+}
+function sanphamtheodanhmuc($danhmuc)
+{
+   return pdo_query("SELECT hoa.*, danhmuc.tendanhmuc
+   FROM hoa
+   INNER JOIN danhmuc ON hoa.id_danhmuc = danhmuc.id
+   WHERE hoa.id_danhmuc = ?", $danhmuc);
 }
